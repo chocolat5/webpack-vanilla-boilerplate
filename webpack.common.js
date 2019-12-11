@@ -46,9 +46,11 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
       },
       {
         test: /\.(css|scss)$/,
@@ -65,12 +67,10 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               plugins: [
-                AutoPrefixer(
-                  {
-                    overrideBrowserslist: ['last 4 versions'],
-                    grid: 'autoplace'
-                  }
-                )
+                AutoPrefixer({
+                  overrideBrowserslist: ['last 4 versions'],
+                  grid: 'autoplace'
+                })
               ]
             }
           },

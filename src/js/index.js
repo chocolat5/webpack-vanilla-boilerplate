@@ -1,6 +1,6 @@
 import { TweenMax } from 'gsap/TweenMax';
 
-'use strict';
+('use strict');
 
 const heroTtl = document.querySelector('.hero_ttl');
 const secTitles = document.querySelectorAll('.section_ttl');

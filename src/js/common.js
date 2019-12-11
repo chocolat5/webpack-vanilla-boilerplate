@@ -4,7 +4,7 @@ import { topMv } from './index';
 
 import '../scss/main.scss';
 
-'use strict';
+('use strict');
 
 const BODY = document.body;
 const header = document.getElementById('header');
@@ -25,13 +25,12 @@ let isMobile = false;
 window size
 -------------------------------- */
 const getWindowSize = () => {
-  if(winW < 599) {
+  if (winW < 599) {
     isMobile = true;
   } else {
     isMobile = false;
   }
 };
-
 
 /* -------------------------------
 loading
@@ -44,8 +43,6 @@ export const showContent = () => {
   if (BODY.classList.contains('index')) setTimeout(() => topMv(), 1200);
 };
 
-
-
 /* -------------------------------
 header
 -------------------------------- */
@@ -57,7 +54,6 @@ const onWindowScroll = () => {
     header.classList.remove('header-onscroll');
   }
 };
-
 
 /* -------------------------------
 smooth scroll
@@ -78,11 +74,10 @@ const moveTo = (el, e) => {
   });
 };
 
-
 /* -------------------------------
 navigation
 -------------------------------- */
-const toggleMenu = (e) => {
+const toggleMenu = e => {
   e.preventDefault();
   e.stopPropagation();
 
@@ -96,32 +91,34 @@ const toggleMenu = (e) => {
     showNav();
   }
 };
-const hideNav = () => navItems.forEach(navItem => {
-  navItem.style.opacity = 0;
-});
+const hideNav = () =>
+  navItems.forEach(navItem => {
+    navItem.style.opacity = 0;
+  });
+
 const showNav = () => {
   navItems.forEach(navItem => {
     let showNavItem = TweenMax.fromTo(navItem, 0.35, {
-      y: '24px',
-      autoAlpha: 0,
-      ease: easing
-    }, {
-      y: 0,
-      autoAlpha: 1,
-    });
+        y: '24px',
+        autoAlpha: 0,
+        ease: easing
+      },
+      {
+        y: 0,
+        autoAlpha: 1
+      }
+    );
     setTimeout(() => {
       showNavItem;
     }, 200);
   });
 };
 
-
 //DOMツリー解析後
 window.addEventListener('DOMContentLoaded', () => {
   getWindowSize();
   if (isMobile) hideNav();
 });
-
 
 //ページ内の全てのリソース読み込み完了後
 window.addEventListener('load', () => {
@@ -139,8 +136,10 @@ window.addEventListener('scroll', () => {
   onWindowScroll();
 });
 
-anchors.forEach(anchor => anchor.addEventListener('click', function (e) {
-  moveTo(this, e);
-}));
+anchors.forEach(anchor =>
+  anchor.addEventListener('click', function(e) {
+    moveTo(this, e);
+  })
+);
 
-navBtn.addEventListener('click', (e) => toggleMenu(e));
+navBtn.addEventListener('click', e => toggleMenu(e));
