@@ -20,19 +20,19 @@ boilerplate for Web Site using jQuery
 git clone https://github.com/chocolat5/jquery-boilerplate.git <PROJECT_NAME>
 ```
 
-1. Move to the appropriate directory
+2. Move to the appropriate directory
 
 ```
 cd <PROJECT_NAME>
 ```
 
-1. Install npm package
+3. Install npm package
 
 ```
 npm install --save-dev
 ```
 
-1. Run the project
+4. Run the project
 
 ```
 npm run start
