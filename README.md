@@ -10,6 +10,8 @@ boilerplate for Web Site using jQuery
 * Sass(SCSS)
 * Hot reload
 * Webpack dev server
+* Prettier
+* ESLint
 
 
 ## Quick start
