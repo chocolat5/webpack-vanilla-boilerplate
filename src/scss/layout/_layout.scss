@@ -1,0 +1,119 @@
+/*
+* Layout
+* ================================== */
+.wrapper {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.section {
+  padding: $pd-sec-mb;
+
+  @include mq(medium) {
+    padding: $pd-sec-tab;
+  }
+
+  &-bg {
+    @extend .section;
+    background: color(bg);
+  }
+}
+
+
+.container {
+  @include container;
+}
+
+
+.section_ttl {
+  margin: 0 0 4rem;
+  @extend %h2;
+  text-align: center;
+
+  @include mq(medium) {
+
+  }
+}
+
+.section_lead {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.alignc { text-align: center; }
+.alignr { text-align: right; }
+.alignl { text-align: left; }
+
+
+
+/* loading
+====================================== */
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 10000;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s ease 0.4s;
+
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader_spinner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 1.6rem;
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s ease 0.4s;
+
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+
+
+/* block
+====================================== */
+.block_split {
+  @include flexbox($wrap: wrap);
+
+  @include mq(medium) {
+    @include flexbox($justify-content: space-between);
+  }
+}
+
+.block_split_head,
+.block_split_img,
+.block_split_content {
+  width: 100%;
+
+  @include mq(medium) {
+    width: calc((100% - 3.5139092vw) / 2);
+  }
+}
+
+.block_split_head {
+  margin: 0 0 1em;
+  font-size: 2.4rem;
+}

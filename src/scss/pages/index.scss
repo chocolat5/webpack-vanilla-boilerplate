@@ -1,0 +1,263 @@
+/* =====================================
+index
+====================================== */
+
+/* hero
+============================ */
+.hero {
+  position: relative;
+  background: url(../img/index/main.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 600px;
+  z-index: 1;
+}
+
+.hero_ttl {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  width: 85%;
+  max-width: 750px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .1em;
+  text-align: left;
+
+  @include mq(small) {
+    font-size: 6.4rem;
+    line-height: 1.1;
+  }
+}
+
+
+.scroll_down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  bottom: 15px;
+  top: auto;
+  margin: auto;
+  width: 18px;
+  height: 32px;
+  border: 2px solid #FFF;
+  border-radius: 9px;
+  z-index: 1;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    top: 6px;
+    bottom: auto;
+    margin: auto;
+    width: 2px;
+    height: 6px;
+    background: #FFF;
+    border-radius: 1px;
+  }
+}
+
+
+
+/* intro
+============================ */
+.intro {
+  .section_ttl {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .section_lead {
+    font-size: 18px;
+  }
+
+  .btn_primary {
+    margin-top: 24px;
+  }
+
+  @include mq(medium) {
+    .btn_primary {
+      margin-top: 32px;
+    }
+  }
+}
+
+
+
+
+/* concept
+============================ */
+.concept {
+}
+
+
+/* service
+============================ */
+.service_list {
+  margin: 4em 0 0;
+
+  @include mq(medium) {
+    @include flexbox($justify-content: space-between);
+    @include cards-wrap(32px);
+  }
+
+  &-item {
+    margin: 0 0 32px;
+    padding: 0 0 0 72px;
+
+    @include mq(medium) {
+      @include cards-item(3, 32px);
+    }
+  }
+}
+
+.service_title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.service_txt {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.service_icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  background: color(bg);
+}
+
+.service_link {
+  display: inline-block;
+  padding: 0 0 .3em;
+  color: rgb(5, 214, 139);
+  border-bottom: 2px solid rgb(5, 214, 139);
+}
+
+
+
+/* articles
+============================ */
+.article_list {
+  @include grid(4);
+  margin: 0 0 40px;
+}
+
+.article_item {
+  grid-column: span 2;
+  grid-row: auto;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+
+  @include mq(medium) {
+    grid-column: span 1;
+  }
+
+  a {
+    display: block;
+    padding: 0 2rem 2rem;
+    color: #444;
+  }
+}
+
+
+.article_thumb {
+  @include aspect-ratio-img(206, 90);
+  width: calc(100% + 4rem);
+  margin: 0 -2rem;
+}
+
+.article_cat {
+  margin: 1em 0;
+  font-size: 1.3rem;
+  opacity: .7;
+}
+
+.article_ttl {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.article_link {
+  display: inline-block;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #ccc;
+}
+
+
+
+/* news
+============================ */
+.news_list {
+  max-width: 98rem;
+  margin-right: auto;
+  margin-left: auto
+}
+
+.news_item {
+  border-top: 1px solid #ddd;
+
+  &:last-child {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.news_link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: color(link);
+  padding: 1em;
+
+  @include mq(medium) {
+    padding: 32px 24px;
+    
+    &:hover {
+      color: rgba(color(text), .6);
+    }
+  }
+}
+
+.news_cat,
+.news_date {
+  display: inline-block;
+  margin: 0 1em .8em 0;
+  font-size: 1.4rem;
+  line-height: 1.8; }
+
+.news_ttl {
+  display: inline;
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+
+/* contact
+============================ */
+.contact {
+  .contact_form {
+    a {
+      color: color(primary, base);
+      text-decoration: underline;
+    }
+  }
+
+  @include mq(medium) {
+    .container {
+      max-width: $x-small;
+      padding: 0;
+    }
+  }
+}
