@@ -1,5 +1,5 @@
 {
-  "name": "webpack-jquery-boilerplate",
+  "name": "jquery-boilerplate",
   "version": "1.0.0",
   "description": "Webpack 4 boilerplate: Babel, Sass, hot reload and dev server",
   "private": true,
