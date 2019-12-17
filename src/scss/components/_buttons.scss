@@ -1,24 +1,16 @@
 @charset 'UTF-8';
 
+.btn,
 %btn {
   position: relative;
+  display: inline-block;
   text-align: center;
   overflow: hidden;
   cursor: pointer;
 }
 
-%btn-block {
-  @extend %btn;
-  display: block;
-}
-
-%btn-inline {
-  @extend %btn;
-  display: inline-block;
-}
-
 .btn_primary {
-  @extend %btn-inline;
+  @extend %btn;
   min-width: 200px;
   max-width: 320px;
   height: 56px;

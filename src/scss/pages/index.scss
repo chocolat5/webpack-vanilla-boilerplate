@@ -70,7 +70,6 @@ index
 ============================ */
 .intro {
   .section_ttl {
-    font-weight: bold;
     text-align: left;
   }
 
@@ -149,52 +148,8 @@ index
 
 /* articles
 ============================ */
-.article_list {
-  @include grid(4);
-  margin: 0 0 40px;
-}
+@import './_article';
 
-.article_item {
-  grid-column: span 2;
-  grid-row: auto;
-  background: #fff;
-  border-radius: 4px;
-  overflow: hidden;
-
-  @include mq(medium) {
-    grid-column: span 1;
-  }
-
-  a {
-    display: block;
-    padding: 0 2rem 2rem;
-    color: #444;
-  }
-}
-
-
-.article_thumb {
-  @include aspect-ratio-img(206, 90);
-  width: calc(100% + 4rem);
-  margin: 0 -2rem;
-}
-
-.article_cat {
-  margin: 1em 0;
-  font-size: 1.3rem;
-  opacity: .7;
-}
-
-.article_ttl {
-  font-size: 1.5rem;
-  line-height: 2;
-}
-
-.article_link {
-  display: inline-block;
-  font-size: 1.4rem;
-  border-bottom: 2px solid #ccc;
-}
 
 
 

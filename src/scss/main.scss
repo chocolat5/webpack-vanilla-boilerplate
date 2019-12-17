@@ -18,6 +18,7 @@
 
 /* Layout */
 @import 'layout/_grid';
+@import 'layout/_layout';
 @import 'layout/_form';
 @import 'layout/_header';
 @import 'layout/_navigation';
@@ -26,7 +27,6 @@
 
 /* Pages */
 @import 'pages/index';
-@import 'pages/article';
 
 ///* Themes */
 //@import 'themes/';

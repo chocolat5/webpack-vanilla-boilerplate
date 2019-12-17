@@ -13,6 +13,7 @@
 // Boxshadow
 // clearfix
 // Center element
+// Typography
 
 
 //* Mediaquery
@@ -120,7 +121,7 @@
 //* clearfix
 // --------------------------------------- */
 //@extend %clearfix;
-%clearfix {
+@mixin clearfix {
   *zoom: 1;
 
   &:before,
@@ -153,4 +154,16 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+
+
+//* Typography
+// --------------------------------------- */
+//@include vertical-align;
+@mixin headline-base($size) {
+  margin-bottom: map-get($headlines-mb, $size);
+  font-size: map-get($headlines, $size);
+  font-weight: $font-weight-head;
+  line-height: map-get($headlines-line-height, $size);
 }

@@ -30,8 +30,8 @@
 
 
 .section_ttl {
+  @include headline-base(h2);
   margin: 0 0 4rem;
-  @extend %h2;
   text-align: center;
 
   @include mq(medium) {
