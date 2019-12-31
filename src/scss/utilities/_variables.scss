@@ -29,14 +29,14 @@ $breakpoints: (
 // --------------------------------------- */
 $pd-mb: 8.5333vw;
 
-$pd-sec-mb: 40px 0;
-$pd-sec-tab: 80px 0;
+$pd-sec-mb: 48px 0;
+$pd-sec-tab: 96px 0;
 
 
 
 //* Layout
 // --------------------------------------- */
-$header-height-mb: 80px;
+$header-height-mb: 60px;
 $header-height-tab: 120px;
 
 
@@ -84,21 +84,37 @@ $line-height: 1.8;
 
 
 //Headline
-$headlines: (
-  h1: 5.8rem,
-  h2: 3.7rem,
-  h3: 2.3rem,
+$headlines-s: (
+  h1: 3.2rem,
+  h2: 2.4rem,
+  h3: 2rem,
   h4: 1.6rem,
+) !default;
+
+$headlines: (
+  h1: 4rem,
+  h2: 3.2rem,
+  h3: 2.4rem,
+  h4: 1.8rem,
 ) !default;
 
 $headlines-line-height: (
   h1: 1.2,
-  h2: 1.35,
-  h3: 1.1,
-  h4: 1.8,
+  h2: 1.6,
+  h3: 1.35,
+  h4: 1.45,
+) !default;
+
+$headlines-mb-s: (
+  h1: 24px,
+  h2: 12px,
+  h3: 8px,
+  h4: 8px,
 ) !default;
 
 $headlines-mb: (
   h1: 48px,
   h2: 24px,
+  h3: 16px,
+  h4: 8px,
 ) !default;

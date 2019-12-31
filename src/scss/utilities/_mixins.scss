@@ -1,5 +1,5 @@
 // ================================================= */
-// Minins
+// Mixins
 // ================================================= */
 
 //
@@ -162,8 +162,13 @@
 // --------------------------------------- */
 //@include vertical-align;
 @mixin headline-base($size) {
-  margin-bottom: map-get($headlines-mb, $size);
-  font-size: map-get($headlines, $size);
+  margin-bottom: map-get($headlines-mb-s, $size);
+  font-size: map-get($headlines-s, $size);
   font-weight: $font-weight-head;
   line-height: map-get($headlines-line-height, $size);
+
+  @include mq(small) {
+    margin-bottom: map-get($headlines-mb, $size);
+    font-size: map-get($headlines, $size);
+  }
 }

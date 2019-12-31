@@ -35,16 +35,18 @@
 
 
 
-//* Articles Cards
+//* Articles List
 // --------------------------------------- */
 //@include cards(2, 32px);
-@mixin cards-wrap($gap: 32px ) {
+@mixin article-wrap($gap: 32px) {
   margin-left: -#{$gap};
+  margin-right: -#{$gap};
 }
 
-@mixin cards-item($rows: 2, $gap: 32px ) {
+@mixin article-item($rows: 2, $gap: 32px ) {
   width: calc((100% - (#{$gap} * #{$rows})) / #{$rows});
   margin-left: $gap;
+  margin-right: $gap;
 }
 
 
@@ -53,28 +55,32 @@
 
 //* Grid
 // --------------------------------------- */
-$grid-spacing: 4.2666vw;
-
 //@include grid(12, 4%);
-@mixin grid($columns) {
+@mixin grid($columns, $spacing) {
   display: grid;
 
-  @if $columns == 2 {
+  @if $columns == 1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: $spacing;
+  }
+
+  @else if $columns == 2 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 32px $grid-spacing;
+    grid-gap: $spacing;
   }
 
   @else if $columns == 4 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    grid-gap: 32px $grid-spacing;
+    grid-gap: $spacing;
   }
 
   @else if $columns == 12 {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    grid-gap: 32px $grid-spacing;
+    grid-gap: $spacing;
   }
 
 }

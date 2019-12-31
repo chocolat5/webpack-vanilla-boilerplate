@@ -25,7 +25,7 @@
 
   &:after {
     right: 2rem;
-    @include arrow(16px, 2px, #fff, right);
+    @include arrow(12px, 2px, #fff, right);
   }
 
   &:hover {

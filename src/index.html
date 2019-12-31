@@ -37,16 +37,16 @@
 
 <div id="wrapper" class="wrapper">
   <header id="header" class="header">
-    <a href="/" class="logo header_logo">
+    <a href="/" class="header_logo">
       <img src="assets/img/common/logo-blue.png" srcset="assets/img/common/logo-blue.png 1x, assets/img/common/logo-blue@2x.png 2x" alt="sitename">
     </a>
     <nav id="gnav" class="gnav">
-      <div class="gnav-scroller">
+      <div class="gnav_inner">
         <ul class="gnav_list">
-          <li class="gnav_item gnav_item-has_sub">
-            <span class="gnav_sub-name">Serivce</span>
-            <nav class="gnav_sub">
-              <ul class="gnav_sub-list">
+          <li class="gnav_list__item gnav_sub">
+            <span class="gnav_sub__name">Serivce</span>
+            <nav class="gnav_sub__content">
+              <ul class="gnav_sub__list">
                 <li><a href="#">Mathematics and Physical Sciences</a></li>
                 <li><a href="#">Life Sciences</a></li>
                 <li><a href="#">Autism Research Initiative</a></li>
@@ -54,10 +54,10 @@
               </ul>
             </nav>
           </li>
-          <li class="gnav_item"><a href="/work" class="gnav_item-link">Work</a></li>
-          <li class="gnav_item"><a href="/about" class="gnav_item-link">About</a></li>
-          <li class="gnav_item"><a href="/blog" class="gnav_item-link">Blog</a></li>
-          <li class="gnav_item"><a href="/contact" class="gnav_item-link">Contact</a></li>
+          <li class="gnav_list__item"><a href="/work" class="gnav_list__item__link">Work</a></li>
+          <li class="gnav_list__item"><a href="/about" class="gnav_list__item__link">About</a></li>
+          <li class="gnav_list__item"><a href="/blog" class="gnav_list__item__link">Blog</a></li>
+          <li class="gnav_list__item"><a href="/contact" class="gnav_list__item__link">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -68,125 +68,114 @@
 
   <main id="main" class="main">
     <section class="hero">
-      <h2 class="hero_ttl">Lorem ipsum<br>dolor sit amet,<br>consectetur</h2>
+      <h2 class="hero_copy">親譲りの無鉄砲で<br>小供の時から損ばかりしている</h2>
       <a href="#intro" class="scroll_down"><span></span></a>
     </section><!--/top_cont-->
 
-    <section id="intro" class="intro section">
+    <section class="top_intro section">
       <div class="container">
         <div class="block_split">
           <div class="block_split_head">
-            <h2 class="section_ttl fade_in_down">Welcome to Lepsim!</h2>
+            <h2 class="section_ttl fade_in_down">親譲りの無鉄砲で小供の時から損ばかりしている</h2>
           </div>
           <div class="block_split_content">
-            <p class="section_lead fade_in_down">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
-            <a href="#" class="btn_primary">View more articles</a>
+            <p class="section_lead fade_in_down">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。</p>
+            <a href="#" class="btn_primary">詳しく見る</a>
           </div>
         </div>
       </div>
-    </section><!--#concept-->
+    </section>
 
-    <section class="typography section-bg">
-      <div class="container">
-        <div class="article">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipi</h2>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill</p>
-          <h3>Lorem ipsum dolor sit amet, consectetur adipi</h3>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill</p>
-          <h4>Lorem ipsum dolor sit amet, consectetur adipi</h4>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill</p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-            <li>sed do eiusmod tempor incididunt</li>
-            <li>Ut enim ad minim veniam, quis nostrud exercitation</li>
-          </ul>
-          <a href="#" class="btn_primary">View more articles</a>
+    <section class="section-bg">
+      <div class="container block_split">
+        <h3 class="block_split__head">Lorem ipsum dolor sit amet,<br>consectetur adipisicin</h3>
+        <div class="block_split__content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </p>
+          <a href="" class="btn_primary">More Detail</a>
         </div>
+        <figure class="block_split__img">
+          <img src="assets/img/thumb.jpg" alt="">
+        </figure>
       </div>
-    </section><!--#concept-->
+    </section>
 
-    <section id="concept" class="concept section">
+    <section id="service" class="top_service section">
       <div class="container">
-        <h2 class="section_ttl">Our goal is to change the world<br>through creativity</h2>
-        <p class="section_lead fade_in_down">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
-      </div>
-    </section><!--#concept-->
-
-    <section id="service" class="service section">
-      <div class="container">
-        <h2 class="section_ttl">Our Services</h2>
-        <p class="section_lead alignc fade_in_down">Far far away, behind the word mountains, <br>far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h2 class="section_ttl">Services<span>サービス</span></h2>
         <ul class="service_list">
-          <li class="service_list-item fade_in_down">
-            <div class="service_icon">
-            </div>
-            <h3 class="service_title">EC Business</h3>
-            <p class="service_txt">親譲りの無鉄砲で小供<br>の時から損ばかりしている。</p>
-            <a href="#" class="service_link">Learn More</a>
+          <li class="service_list__item fade_in_down">
+            <a href="#" class="service_list__link">
+              <img src="assets/img/thumb.jpg" alt="">
+              <h3 class="service_list__ttl">EC Business</h3>
+              <p class="service_list__desc">親譲りの無鉄砲で小供<br>の時から損ばかりしている。</p>
+              <span class="service_list__more">Learn More</span>
+            </a>
           </li>
-          <li class="service_list-item fade_in_down">
-            <div class="service_icon">
-            </div>
-            <h3 class="service_title">Web Service</h3>
-            <p class="service_txt">親譲りの無鉄砲で小供<br>の時から損ばかりしている。</p>
-            <a href="#" class="service_link">Learn More</a>
+          <li class="service_list__item fade_in_down">
+            <a href="#" class="service_list__link">
+              <img src="assets/img/thumb.jpg" alt="">
+              <h3 class="service_list__ttl">EC Business</h3>
+              <p class="service_list__desc">親譲りの無鉄砲で小供<br>の時から損ばかりしている。</p>
+              <span class="service_list__more">Learn More</span>
+            </a>
           </li>
-          <li class="service_list-item fade_in_down">
-            <div class="service_icon">
-            </div>
-            <h3 class="service_title">App Development</h3>
-            <p class="service_txt">親譲りの無鉄砲で小供<br>の時から損ばかりしている。</p>
-            <a href="#" class="service_link">Learn More</a>
+          <li class="service_list__item fade_in_down">
+            <a href="#" class="service_list__link">
+              <img src="assets/img/thumb.jpg" alt="">
+              <h3 class="service_list__ttl">EC Business</h3>
+              <p class="service_list__desc">親譲りの無鉄砲で小供<br>の時から損ばかりしている。</p>
+              <span class="service_list__more">Learn More</span>
+            </a>
           </li>
         </ul>
       </div>
-    </section><!--#lineup-->
+    </section>
 
     <section class="articles section-bg">
       <div class="container">
-        <h2 class="section_ttl">Journal</h2>
+        <h2 class="section_ttl">Journal<span>コラム</span></h2>
         <ul class="article_list">
-          <li class="article_item">
+          <li class="article_list__item">
             <a href="#">
-              <div style="background-image: url(assets/img/thumb.jpg);" class="article_thumb"></div>
-              <p class="article_cat">News</p>
-              <p class="article_ttl">親譲りの無鉄砲で小供の時から損ばかりしている</p>
-              <span class="article_link">Leran More</span>
+              <div style="background-image: url(assets/img/thumb.jpg);" class="article_list__thumb"></div>
+              <p class="article_list__cat">News</p>
+              <p class="article_list__ttl">親譲りの無鉄砲で小供の時から損ばかりしている</p>
+              <span class="article_list__link">Leran More</span>
             </a>
           </li>
-          <li class="article_item">
+          <li class="article_list__item">
             <a href="#">
-              <div style="background-image: url(assets/img/thumb.jpg);" class="article_thumb"></div>
-              <p class="article_cat">News</p>
-              <p class="article_ttl">親譲りの無鉄砲で小供の時から損ばかりしている</p>
-              <span class="article_link">Leran More</span>
+              <div style="background-image: url(assets/img/thumb.jpg);" class="article_list__thumb"></div>
+              <p class="article_list__cat">News</p>
+              <p class="article_list__ttl">親譲りの無鉄砲で小供の時から損ばかりしている</p>
+              <span class="article_list__link">Leran More</span>
             </a>
           </li>
-          <li class="article_item">
+          <li class="article_list__item">
             <a href="#">
-              <div style="background-image: url(assets/img/thumb.jpg);" class="article_thumb"></div>
-              <p class="article_cat">News</p>
-              <p class="article_ttl">親譲りの無鉄砲で小供の時から損ばかりしている</p>
-              <span class="article_link">Leran More</span>
+              <div style="background-image: url(assets/img/thumb.jpg);" class="article_list__thumb"></div>
+              <p class="article_list__cat">News</p>
+              <p class="article_list__ttl">親譲りの無鉄砲で小供の時から損ばかりしている</p>
+              <span class="article_list__link">Leran More</span>
             </a>
           </li>
-          <li class="article_item">
+          <li class="article_list__item">
             <a href="#">
-              <div style="background-image: url(assets/img/thumb.jpg);" class="article_thumb"></div>
-              <p class="article_cat">News</p>
-              <p class="article_ttl">親譲りの無鉄砲で小供の時から損ばかりしている</p>
-              <span class="article_link">Leran More</span>
+              <div style="background-image: url(assets/img/thumb.jpg);" class="article_list__thumb"></div>
+              <p class="article_list__cat">News</p>
+              <p class="article_list__ttl">親譲りの無鉄砲で小供の時から損ばかりしている</p>
+              <span class="article_list__link">Leran More</span>
             </a>
           </li>
         </ul>
-        <div class="alignc"><a href="#" class="btn_primary">View more articles</a></div>
+        <div class="alignc"><a href="#" class="btn_primary">一覧を見る</a></div>
       </div>
     </section>
 
     <section class="news section">
       <div class="container">
         <div class="section_ttl_wrap fade">
-          <h2 class="section_ttl">News</h2>
+          <h2 class="section_ttl">News<span>お知らせ</span></h2>
         </div>
         <ul class="news_list d_flex d_flex_wrap mb_lg js-fade">
           <li class="news_item d_flex_item">
@@ -235,12 +224,31 @@
             </article>
           </li>
         </ul>
-        <div class="alignc"><a href="#" class="btn_primary">View more articles</a></div>
+        <div class="alignc"><a href="#" class="btn_primary">一覧を見る</a></div>
       </div>
-    </section><!-- #news -->
+    </section>
+
+    <section class="typography section-bg">
+      <div class="container">
+        <div class="article_detail">
+          <h2>親譲りの無鉄砲で小供の時から損ばかりしている</h2>
+          <p class="">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
+          <h3>親譲りの無鉄砲で小供の時から損ばかりしている</h3>
+          <p class="">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
+          <h4>親譲りの無鉄砲で小供の時から損ばかりしている</h4>
+          <p class="">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
+          <ul>
+            <li>親譲りの無鉄砲で小供の時から損ばかりしているsicing</li>
+            <li>sed do eiusmod tempor incididunt</li>
+            <li>Ut enim ad minim veniam, quis nostrud exercitation</li>
+          </ul>
+          <a href="#" class="btn_primary">詳しく見る</a>
+        </div>
+      </div>
+    </section>
 
 
-    <section class="contact section-bg">
+    <section class="contact section">
       <div class="container">
         <h2 class="section_ttl">Contact</h2>
         <form class="form">

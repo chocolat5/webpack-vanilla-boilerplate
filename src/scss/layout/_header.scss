@@ -9,9 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: $header-height-mb;
+  height: $header-height-mb;
   width: 100%;
-  padding: 0 $pd-mb;
+  padding: 0 5%;
   z-index: 99;
   transition: background .4s cubic-bezier(.19,1,.22,1);
 
