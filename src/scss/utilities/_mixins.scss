@@ -172,3 +172,19 @@
     font-size: map-get($headlines, $size);
   }
 }
+
+//@include fz_vw(13, 320);
+// p {
+//   font-size: 13px;
+//   font-size: 4.0625vw;
+// }
+
+@function get_vw($size, $viewport) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size: 10, $viewport: 375) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size, $viewport);
+}
