@@ -41,7 +41,6 @@ table {
 :before,
 :after {
   border: 0;
-  outline: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -89,9 +88,4 @@ a {
   &:hover {
     color: rgba(color(text), .6);
   }
-}
-
-:active,
-:focus {
-  outline: none;
 }
