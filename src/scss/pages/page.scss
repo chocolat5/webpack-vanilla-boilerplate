@@ -1,0 +1,378 @@
+/* =====================================
+page
+====================================== */
+.page {
+  h2 {
+    margin: 0 0 8px;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: .1em;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+
+  @include mq(medium) {
+    h2 {
+      margin: 0 0 12px;
+      font-size: 2.4rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 2;
+    }
+  }
+}
+
+.page_container {
+  @include mq(medium) {
+    max-width: 840px;
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+/* =====================================
+制作の流れ
+====================================== */
+.flow {
+  .page_header__img {
+    background-image: url(../img/page/flow_head.jpg);
+    background-position: 58% 50%;
+  }
+
+  @include mq(medium) {
+    .page_header__img {
+      background-position: 50% 0;
+    }
+  }
+}
+
+.flow_list {
+  &__item {
+    margin: 0 0 75px;
+  }
+
+  &__img {
+    margin: 0 0 24px;
+    text-align: center;
+  }
+
+  @include mq(medium) {
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:nth-of-type(even) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__img {
+      flex: 0 0 47.6%;
+      margin: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__text {
+      flex: 0 0 47.6%;
+
+      p {
+        line-height: 2;
+      }
+    }
+  }
+}
+
+.flow_list2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 47.4%;
+    margin: 0 0 40px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    margin: 12px 0 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  @include mq(medium) {
+    flex-wrap: nowrap;
+
+    &__item {
+      flex: 0 0 23.8%;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+/* =====================================
+会社について
+====================================== */
+.about {
+  .page_header__img {
+    background-image: url(../img/page/about_head.jpg);
+    background-position: 50% 50%;
+  }
+
+  @include mq(medium) {
+    .page_header__img {
+      height: 28.8vw;
+      background-position: 50% 0;
+    }
+  }
+}
+
+.about_table {
+  width: 100%;
+  border-collapse: collapse;
+  border-left: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+
+  th, td {
+    height: 48px;
+    padding: 0 12px;
+    border-right: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+  }
+
+  th {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  td {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 599px) { 
+    th, td {
+      display: block;
+      line-height: 48px;
+    }
+  }
+
+  @include mq(medium) {
+    th, td {
+      min-height: 48px;
+      padding: 1.1em 24px;
+      vertical-align: middle;
+    }
+
+    th {
+      width: 33.9%;
+      font-size: 1.4rem;
+    }
+
+    td {
+      width: 66.1%;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.about_greet {
+  padding: 95px 0 36px;
+  text-align: center;
+
+  @include mq(medium) {
+    padding: 9.5vw 0 3.6vw;
+  }
+}
+
+.about_message {
+  padding: 36px 0 60px;
+
+  &__text {
+    margin: 0 0 24px;
+  }
+
+  @include mq(medium) {
+    padding: 3.6vw 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__img {
+      flex: 0 0 61.5%;
+    }
+
+    &__text {
+      flex: 0 0 48%;
+      padding-right: 7.9%;
+    }
+  }
+}
+
+
+
+/* =====================================
+質問一覧
+====================================== */
+.qa {
+  .hentry {
+    padding-bottom: 40px;
+  }
+
+  .page_header__img {
+    background-image: url(../img/page/qa_head.jpg);
+    background-position: 50% 50%;
+  }
+
+  @include mq(medium) {
+    .page_header__img {
+      background-position: 50% 0;
+    }
+  }
+}
+
+.qa_block {
+  border-bottom: 1px solid #BDBDBD;
+
+  dt {
+    position: relative;
+    padding: 20px 40px 20px 0;
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+      top: calc(20px + .45em);
+      right: 0;
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-top: 3px solid #000;
+      border-right: 3px solid #000;
+      transform: rotate(135deg);
+      transition: transform .35s ease;
+    }
+
+    &.is-open:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  dd {
+    display: none;
+    padding: 0 40px 24px 0;
+  }
+
+  dt, dd {
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+    span {
+      color: color(primary, base);
+      font-family: $ff-en;
+    }
+  }
+
+
+  @include mq(medium) {
+    dt {
+      padding: 40px 80px 40px 0;
+
+      &:after {
+        top: 40px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+/* =====================================
+お問い合わせ
+====================================== */
+.contact {
+  .gnav,
+  .header_contact,
+  .hamburger {
+    display: none;
+  }
+
+  .mw_wp_form_complete {
+    p {
+      text-align: center;
+    }
+
+    .btn_primary {
+      margin-top: 40px;
+    }
+  }
+
+  @include mq(medium) {
+    .container {
+      max-width: 840px;
+      padding: 0;
+    }
+  }
+}
+
+
+
+/* =====================================
+制作事例
+====================================== */
+.category-works {
+  .page_header__img {
+    background-image: url(../img/page/works_head.jpg);
+    background-position: 50% 50%;
+  }
+
+  @include mq(medium) {
+    .page_header__img {
+      background-position: 50% 0;
+    }
+  }
+}
+
+
+
+/* =====================================
+制作事例
+====================================== */
+.category-jujustore {
+  .page_header__img {
+    background-image: url(../img/page/jujustore_head.jpg);
+    background-position: 50% 50%;
+  }
+
+  @include mq(medium) {
+    .page_header__img {
+      background-position: 50% 0;
+    }
+  }
+}
+
+@import './article';

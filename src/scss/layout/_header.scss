@@ -9,29 +9,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: $header-height-mb;
+  height: $header-h-mb;
   width: 100%;
   padding: 0 5%;
-  z-index: 99;
+  z-index: 1000;
   transition: background .4s cubic-bezier(.19,1,.22,1);
 
   &-onscroll {
     background: rgba(#fff,.8);
   }
 
-  @include mq(medium) {
-    min-height: $header-height-tab;
+  &__logo {
+    display: inline-block;
+    width: 78px;
+    height: 42px;
+    z-index: 3;
+  }
+
+  @include mq(mid) {
+    min-height: $header-h-tab;
     transition:
       background .4s  cubic-bezier(.19,1,.22,1),
       min-height .3s cubic-bezier(.19,1,.22,1);
   }
 
-}
-
-
-.header_logo {
-  display: inline-block;
-  width: 78px;
-  height: 42px;
-  z-index: 3;
 }

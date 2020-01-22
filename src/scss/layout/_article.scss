@@ -6,25 +6,25 @@
 /* list
 ============================ */
 .article_list {
-  @include grid(4, 32px 24px);
+  @include grid(2, 32px 16px);
   margin: 0 0 40px;
 
   &__item {
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: auto;
     background: #fff;
     border-radius: 4px;
     overflow: hidden;
-  }
 
-  a {
-    display: block;
-    padding: 0 2rem 2rem;
-    color: #444;
+    a {
+      display: block;
+      padding: 0 2rem 2rem;
+      color: #444;
+    }
   }
 
   &__thumb {
-    @include aspect-ratio-img(206, 90);
+    @include aspect-ratio-img(206, 160);
     width: calc(100% + 4rem);
     margin: 0 -2rem;
   }
@@ -46,11 +46,20 @@
     border-bottom: 2px solid #ccc;
   }
 
-  @include mq(medium) {
-    @include grid(4, 32px 32px);
+  @include mq(mid) {
+    @include grid(4, 0 32px);
 
     &__item {
       grid-column: span 1;
+
+      a {
+        transition: $hover;
+    
+        &:hover {
+          color: color(primary, base);
+          opacity: .7;
+        }
+      }
     }
   }
 }

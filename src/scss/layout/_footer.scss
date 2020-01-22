@@ -5,7 +5,7 @@
   padding: $pd-sec-mb;
   background: color(primary, base);
 
-  @include mq(medium) {
+  @include mq(mid) {
     padding: $pd-sec-tab;
   }
 }
@@ -15,7 +15,7 @@
   position: relative;
   @include grid(2, 24px);
 
-  @include mq(medium) {
+  @include mq(mid) {
     @include grid(4, 32px);
     grid-template-rows: 1fr auto;
     grid-gap: 40px 2.342vw;
@@ -30,7 +30,7 @@
 }
 
 .footer_info {
-  @include mq(medium) {
+  @include mq(mid) {
     grid-column: 1 / span 2;
     grid-row: 1;
   }
@@ -75,7 +75,7 @@
     }
   }
 
-  @include mq(medium) {
+  @include mq(mid) {
     grid-column: 3 / -1;
     grid-row: 1;
   }
@@ -95,7 +95,7 @@
     }
   }
 
-  @include mq(medium) {
+  @include mq(mid) {
     grid-column: 1 / -1;
     grid-row: 2;
 
@@ -112,7 +112,7 @@
   letter-spacing: .02em;
   justify-self: end;
 
-  @include mq(medium) {
+  @include mq(mid) {
     grid-column: 1 / -1;
     grid-row: 2;
     align-self: end;

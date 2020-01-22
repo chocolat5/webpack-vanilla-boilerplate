@@ -26,8 +26,10 @@ index
   line-height: 1.2;
   letter-spacing: .1em;
   text-align: left;
+}
 
-  @include mq(small) {
+@include mq(sm) {
+  .hero_copy {
     font-size: 6.4rem;
     line-height: 1.1;
   }
@@ -82,7 +84,7 @@ index
     margin-top: 24px;
   }
 
-  @include mq(medium) {
+  @include mq(mid) {
     .btn_primary {
       margin-top: 32px;
     }
@@ -101,13 +103,10 @@ index
 /* service
 ============================ */
 .service_list {
-  $gap: 16px;
-
   margin: 4em 0 0;
-  @include article-wrap($gap);
 
   &__item {
-    margin: 0 $gap 32px;
+    padding: 16px 0;
   }
 
   &__link {
@@ -131,23 +130,16 @@ index
     border-bottom: 2px solid rgb(5, 214, 139);
   }
 
-  @include mq(medium) {
-    @include flexbox($justify-content: space-between);
+  @include mq(mid) {
+    display: flex;
+    justify-content: space-between;
 
     &__item {
-      @include article-item(3, $gap);
+      width: 30%;
+      flex: 0 0 30%;
     }
   }
 }
-
-
-
-
-/* articles
-============================ */
-@import './_article';
-
-
 
 
 /* news
@@ -173,7 +165,7 @@ index
   color: color(link);
   padding: 1em;
 
-  @include mq(medium) {
+  @include mq(mid) {
     padding: 32px 24px;
     
     &:hover {
@@ -206,7 +198,7 @@ index
     }
   }
 
-  @include mq(medium) {
+  @include mq(mid) {
     .container {
       max-width: $x-small;
       padding: 0;

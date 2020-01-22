@@ -1,0 +1,24 @@
+/* breadcrumbs
+====================================== */
+.breadcrumbs {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem $pd-sm;
+
+  @include mq(mid) {
+    padding: 2rem $pd-mid;
+  }
+
+  span {
+    font-size: 1.4rem;
+  }
+
+  a {
+    color: color('text');
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

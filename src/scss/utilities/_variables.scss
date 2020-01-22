@@ -11,16 +11,16 @@ $x-small: 560px;
 $small:   720px;
 $medium:  960px;
 $large:  1200px;
-$main:   1168px;
 
+$main:   1168px;
 
 
 //* Breakpoints
 // --------------------------------------- */
 $breakpoints: (
-  'small': 600px,
-  'medium': 900px,
-  'large': 1200px,
+  'sm': 600px,
+  'mid': 900px,
+  'lg': 1200px,
 ) !default;
 
 
@@ -28,16 +28,21 @@ $breakpoints: (
 //* Padding
 // --------------------------------------- */
 $pd-mb: 8.5333vw;
+$pd-sm: 8.5333vw;
+$pd-mid: 5%;
 
 $pd-sec-mb: 48px 0;
 $pd-sec-tab: 96px 0;
+
+$pd-sec-sm: 48px;
+$pd-sec-mid: 96px;
 
 
 
 //* Layout
 // --------------------------------------- */
-$header-height-mb: 60px;
-$header-height-tab: 120px;
+$header-h-mb: 60px;
+$header-h-tab: 120px;
 
 
 

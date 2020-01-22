@@ -14,6 +14,7 @@
 // clearfix
 // Center element
 // Typography
+// Grid
 
 
 //* Mediaquery
@@ -39,20 +40,22 @@
 // --------------------------------------- */
 // 最大幅あり
 @mixin container {
-  padding: 0 $pd-mb;
+  padding: 0 $pd-sm;
   margin: 0 auto;
 
   @include mq($main + 64px) {
     max-width: $main;
     padding: 0;
-    //padding: 0 calc((100% - #{$main}) / 2);
   }
 }
 
 // 最大幅なし
 @mixin container-liquid {
-  padding: 0 $pd-mb;
-  margin: 0 auto;
+  padding: $pd-sec-sm $pd-sm;
+
+  @include mq(mid) {
+    padding: $pd-sec-mid $pd-mid;
+  }
 }
 
 
@@ -79,11 +82,12 @@
   @else if ( $deg == "bottom" ) { transform: rotate(45deg);  }
 
   //SPの時
-  @include mq(small) {
+  @include mq(sm) {
     width: calc(#{$width '/'} 2);
     height: calc(#{$width '/'} 2);
   }
 }
+
 
 
 //* Background image for thumbnail
@@ -167,24 +171,46 @@
   font-weight: $font-weight-head;
   line-height: map-get($headlines-line-height, $size);
 
-  @include mq(small) {
+  @include mq(sm) {
     margin-bottom: map-get($headlines-mb, $size);
     font-size: map-get($headlines, $size);
   }
 }
 
-//@include fz_vw(13, 320);
+//@include fs_vw(13, 320);
 // p {
 //   font-size: 13px;
 //   font-size: 4.0625vw;
 // }
 
-@function get_vw($size, $viewport) {
-  $rate: 100 / $viewport;
-  @return $rate * $size * 1vw;
-}
-
-@mixin fz_vw($font_size: 10, $viewport: 375) {
+@mixin fs_vw($font_size: 10, $viewport: 375) {
   font-size: $font_size * 1px;
   font-size: get_vw($font_size, $viewport);
 }
+
+
+
+//* Grid
+// --------------------------------------- */
+@mixin grid($columns, $spacing, $rows: auto) {
+  display: grid;
+
+  @if $columns == 1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: $rows;
+    grid-gap: $spacing;
+  }
+
+  @else if $columns == 2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: $rows;
+    grid-gap: $spacing;
+  }
+
+  @else {
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: $rows;
+    grid-gap: $spacing;
+  }
+}
+

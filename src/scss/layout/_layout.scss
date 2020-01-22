@@ -11,10 +11,11 @@
 
 
 .section {
-  padding: $pd-sec-mb;
+  padding: $pd-sec-sm 0;
+  //@include container-liquid;
 
-  @include mq(medium) {
-    padding: $pd-sec-tab;
+  @include mq(mid) {
+    padding: $pd-sec-mid 0;
   }
 
   &-bg {
@@ -57,51 +58,11 @@
 
 
 
-/* loading
-====================================== */
-.loader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  z-index: 10000;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s ease 0.4s;
-
-  &.loaded {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.loader_spinner {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  font-size: 1.6rem;
-  text-align: center;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s ease 0.4s;
-
-  &.loaded {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-
 
 
 /* block
 ====================================== */
+
 .block_split {
   @include grid(1, 16px 24px);
   grid-template-areas:
