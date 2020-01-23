@@ -24,7 +24,7 @@
   }
 
   &__thumb {
-    @include aspect-ratio-img(206, 160);
+    @include aspect-ratio(1.618, 1);
     width: calc(100% + 4rem);
     margin: 0 -2rem;
   }

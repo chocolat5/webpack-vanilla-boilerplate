@@ -1,0 +1,16 @@
+/*  sidebar
+====================================== */
+.widget_area {
+  width: 27%;
+  flex: 0 0 27%;
+}
+
+.widget-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid color(text);
+}
+
+.widget + .widget {
+  margin-top: 40px;
+}

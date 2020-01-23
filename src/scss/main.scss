@@ -1,37 +1,47 @@
 @charset 'utf-8';
 
 /* Utilities */
-@import 'utilities/_variables';
-@import 'utilities/_functions';
-@import 'utilities/_mixins';
+@import
+  'utilities/_variables',
+  'utilities/_functions',
+  'utilities/_mixins';
 
 
 ///* Vendors */
 //@import 'vendors/';
 
+
 /* Base */
 @import 'base/_reset';
 
-/* Components */
-@import 'components/_buttons';
-@import 'components/_loading';
-@import 'components/_breadcrumbs';
 
 /* Layout */
-@import 'layout/_layout';
-@import 'layout/_form';
-@import 'layout/_header';
-@import 'layout/_navigation';
-@import 'layout/_footer';
-@import 'layout/_article';
+@import
+  'layout/_layout',
+  'layout/_form',
+  'layout/_header',
+  'layout/_navigation',
+  'layout/_footer',
+  'layout/_article';
+
+
+/* Components */
+@import
+  'components/_buttons',
+  'components/_loading',
+  'components/_breadcrumbs';
+
 
 ///* WordPress */
 //@import './wp/index';
 
+
 /* Pages */
-@import 'pages/index';
-@import 'pages/404';
-// @import 'pages/page';
+@import
+  'pages/index',
+  // 'pages/page',
+  'pages/404';
+
 
 ///* Themes */
 //@import 'themes/';

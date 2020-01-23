@@ -1,25 +1,10 @@
 // ================================================= */
 // Mixins
-// ================================================= */
-
-//
 // @include mixin-name($value)
-//
-
-// Mediaquery
-// Container
-// Arrow
-// Background image for thumbnail
-// Boxshadow
-// clearfix
-// Center element
-// Typography
-// Grid
-
+// ================================================= */
 
 //* Mediaquery
 // --------------------------------------- */
-//@include mq(mobile)
 @mixin mq($point) {
   @if map-has-key($breakpoints, $point) {
     @media screen and (min-width: map-get($breakpoints, $point)) {
@@ -31,8 +16,6 @@
     @media screen and (min-width: $point) { @content; }
   }
 }
-
-
 
 
 
@@ -60,31 +43,54 @@
 
 
 
-
-
 //* Arrow
 // --------------------------------------- */
-@mixin arrow($width, $bold, $color, $deg) {
-  position: absolute;
-  top: calc(50% - calc(#{$width '*' .7 '/'} 2));
-  border-style: solid;
-  border-width: 0 $bold $bold 0;
+
+@mixin arrow($direction: down, $size: 5px, $color: #fff) {
   content: '';
   display: inline-block;
-  height: $width;
-  width: $width;
+  width: 0;
+  height: 0;
+  @if ($direction == left) {
+    border-style: solid;
+    border-width: $size $size $size 0;
+    border-color: transparent $color transparent transparent;
+  }
+  @else if ($direction == right) {
+    border-style: solid;
+    border-width: $size 0 $size $size;
+    border-color: transparent transparent transparent $color;
+  }
+  @else if ($direction == down) {
+    border-style: solid;
+    border-width: $size $size 0 $size;
+    border-color: $color transparent transparent transparent;
+  }
+  @else {
+    border-style: solid;
+    border-width: 0 $size $size $size;
+    border-color: transparent transparent $color transparent;
+  }
+}
+
+@mixin arrow-brackets($size, $bold, $direction, $color: #fff) {
+  content: '';
+  display: inline-block;
+  height: $size;
+  width: $size;
+  border-style: solid;
+  border-width: $bold $bold 0 0;
   border-color: $color;
 
   //角度
-  @if ( $deg == "left" )        { transform: rotate(135deg); }
-  @else if ( $deg == "top" )    { transform: rotate(225deg); }
-  @else if ( $deg == "right" )  { transform: rotate(-45deg); }
-  @else if ( $deg == "bottom" ) { transform: rotate(45deg);  }
+  @if ( $direction == "left" ) { transform: rotate(-135deg); }
+  @else if ( $direction == "right" ) { transform: rotate(45deg); }
+  @else if ( $direction == "down" )  { transform: rotate(135deg); }
+  @else if ( $direction == "up" )   { transform: rotate(-45deg); }
 
-  //SPの時
   @include mq(sm) {
-    width: calc(#{$width '/'} 2);
-    height: calc(#{$width '/'} 2);
+    width: calc(#{$size '/'} 2);
+    height: calc(#{$size '/'} 2);
   }
 }
 
@@ -92,16 +98,14 @@
 
 //* Background image for thumbnail
 // --------------------------------------- */
-//@include aspect-ratio-img($width, $height, $image: null);
-@mixin aspect-ratio-img( $width, $height, $default-image: null ) {
+@mixin aspect-ratio( $width, $height, $image: $noimg ) {
   display: block;
   width: 100%;
   height: 0;
-  padding-top: ($height / $width) * 100%;
+  padding-top: calc((#{$height '/' $width}) * 100%);
 
-  @if $default-image != null {
-    background: url($default-image) no-repeat 50% 50%;
-    background-size: cover;
+  @if $image != null {
+    background: url($image) 50% 50% / cover no-repeat;
   }
 
   @else {
@@ -143,21 +147,10 @@
 // --------------------------------------- */
 //@include pseudo-element;
 //@include pseudo-element('foo', relative);
-@mixin pseudo-element($content: '', $position: absolute, $display: block) {
+@mixin pseudo-element( $position: absolute, $content: '' , $display: block) {
   position: $position;
-  content: $content;
+  content: '';
   display: $display;
-}
-
-
-
-//* Center element
-// --------------------------------------- */
-//@include vertical-align;
-@mixin vertical-align {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 
@@ -182,12 +175,23 @@
 //   font-size: 13px;
 //   font-size: 4.0625vw;
 // }
-
+// font-size with vw
 @mixin fs_vw($font_size: 10, $viewport: 375) {
   font-size: $font_size * 1px;
   font-size: get_vw($font_size, $viewport);
 }
 
+// font-face
+@mixin font-face($name, $file) {
+   @font-face {
+   font-family: "#{$name}";
+   src: url("../fonts/#{$file}.eot");
+   src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+   url("../fonts/#{$file}.woff") format("woff"),
+   url("../fonts/#{$file}.ttf") format("truetype"),
+   url("../fonts/#{$file}.svg?#webfont") format("svg");
+ }
+}
 
 
 //* Grid

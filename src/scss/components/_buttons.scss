@@ -24,8 +24,10 @@
   transition: $hover;
 
   &:after {
-    right: 2rem;
-    @include arrow(8px, 2px, #fff, right);
+    margin-left: 1em;
+    @include arrow-brackets(14px, 2px, right, #fff);
+    vertical-align: middle;
+    // @include arrow();
   }
 
   &:hover {

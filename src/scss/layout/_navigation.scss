@@ -77,7 +77,7 @@
     display: inline-block;
     color: color(text);
     font-size: 1.6rem;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   @include mq(mid) {
@@ -97,7 +97,7 @@
     }
 
     &__name:after {
-      @include arrow(8px, 2px, #fff, bottom);
+      @include arrow-brackets(15px, 2px, down, #fff);
       position: relative;
       margin-left: 8px;
     }
@@ -110,10 +110,6 @@
         opacity: 1;
         visibility: visible;
         transition-delay: .05s;
-      }
-
-      & > #{$this}__name:after {
-        border-top-color: color(primary, base);
       }
     }
 
