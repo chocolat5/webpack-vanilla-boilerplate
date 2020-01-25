@@ -63,12 +63,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: color('text');
-  font: $font-weight $font-size-mobile#{'/'}$line-height $font-family;
+  font: $font-weight _rem($font-size-base-px) #{'/'} _line_height($font-size-base-px) $font-family;
   -moz-font-feature-settings : 'palt' 1;
   font-feature-settings : 'palt' 1;
 
   @include mq(mid) {
-    font-size: $font-size-desktop;
+    font-size: _rem($font-size-pc-px);
   }
 }
 

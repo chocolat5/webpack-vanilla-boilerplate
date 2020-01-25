@@ -142,6 +142,21 @@
 }
 
 
+//* Form reset
+// --------------------------------------- */
+@mixin formReset {
+  input, button, textarea, select {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    appearance: none;
+  }
+}
+
+
 
 //* before / after element
 // --------------------------------------- */
@@ -158,15 +173,37 @@
 //* Typography
 // --------------------------------------- */
 //@include vertical-align;
-@mixin headline-base($size) {
-  margin-bottom: map-get($headlines-mb-s, $size);
-  font-size: map-get($headlines-s, $size);
-  font-weight: $font-weight-head;
-  line-height: map-get($headlines-line-height, $size);
+// @mixin headline-base($size) {
+//   margin-bottom: map-get($headlines-mb-s, $size);
+//   font-size: map-get($headlines-s, $size);
+//   font-weight: $font-weight-head;
+//   line-height: map-get($headlines-line-height, $size);
+
+//   @include mq(sm) {
+//     margin-bottom: map-get($headlines-mb, $size);
+//     font-size: map-get($headlines, $size);
+//   }
+// }
+@mixin headline-base($size, $weight) {
+  font-size: _rem(map-get($headlines-s, $size));
+  font-weight: $weight;
+  line-height: _line_height(map-get($headlines, $size));
+
+  @if($size == h1) {
+    margin-top: #{$line-height-base-px}px;
+    margin-bottom: #{$line-height-base-px * 2}px;
+  }
+  @else if ($size == h2) {
+    margin-top: #{$line-height-base-px}px;
+    margin-bottom: #{$line-height-base-px}px;
+  }
+  @else {
+    margin-top: #{$line-height-base-px}px;
+    margin-bottom: 0;
+  }
 
   @include mq(sm) {
-    margin-bottom: map-get($headlines-mb, $size);
-    font-size: map-get($headlines, $size);
+    font-size: _rem(map-get($headlines, $size));
   }
 }
 

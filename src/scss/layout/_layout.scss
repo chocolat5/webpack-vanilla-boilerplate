@@ -31,7 +31,7 @@
 
 
 .section_ttl {
-  @include headline-base(h2);
+  @include headline-base(h2, bold);
   text-align: center;
 
   span {
@@ -79,7 +79,7 @@
 
   &__head {
     grid-area: head;
-    @include headline-base(h3);
+    @include headline-base(h3, bold);
   }
 
   &__img {

@@ -73,19 +73,21 @@
   margin: 0 auto;
 
   h1 {
-    @include headline-base(h1);
+    @include headline-base(h1, bold);
   }
 
   h2 {
-    @include headline-base(h2);
+    @include headline-base(h2, bold);
+    padding-bottom: 8px;
+    border-bottom: 2px solid color(primary, base);
   }
 
   h3 {
-    @include headline-base(h3);
+    @include headline-base(h3, bold);
   }
 
   h4 {
-    @include headline-base(h4);
+    @include headline-base(h4, bold);
   }
 
   p, ul {

@@ -80,47 +80,24 @@ $hover: all .3s ease;
 // --------------------------------------- */
 
 //Body
-$font-size-mobile: 1.4rem;
-$font-size-desktop: 1.5rem;
-$body-font-size: 1.4rem;
-$font-weight: normal;
-$font-weight-head: 600;
+$font-size-base-px: 14;
+$font-size-pc-px: 16;
+$font-weight: 400;
 $font-family: 'Work Sans','游ゴシック Medium', 'Yu Gothic Medium', YuGothic, '游ゴシック体', '游ゴシック', "Hiragino Kaku Gothic ProN", 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
-$line-height: 1.8;
+$line-height-base-px: 29;
 
 
 //Headline
 $headlines-s: (
-  h1: 3.2rem,
-  h2: 2.4rem,
-  h3: 2rem,
-  h4: 1.6rem,
+  h1: 24,
+  h2: 20,
+  h3: 16,
+  h4: 14,
 ) !default;
 
 $headlines: (
-  h1: 4rem,
-  h2: 3.2rem,
-  h3: 2.4rem,
-  h4: 1.8rem,
-) !default;
-
-$headlines-line-height: (
-  h1: 1.2,
-  h2: 1.6,
-  h3: 1.35,
-  h4: 1.45,
-) !default;
-
-$headlines-mb-s: (
-  h1: 24px,
-  h2: 12px,
-  h3: 8px,
-  h4: 8px,
-) !default;
-
-$headlines-mb: (
-  h1: 48px,
-  h2: 24px,
-  h3: 16px,
-  h4: 8px,
+  h1: 27,
+  h2: 22,
+  h3: 18,
+  h4: 14,
 ) !default;
