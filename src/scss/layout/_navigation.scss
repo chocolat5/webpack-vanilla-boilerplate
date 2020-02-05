@@ -1,6 +1,17 @@
 /*
 * Nabigation
 * ================================== */
+$gnav-font-size-mb: 2rem;
+$gnav-font-size-sub: 1.6rem;
+$gnav-font-size: 1.6rem;
+
+%gnav-item {
+  color: color(link);
+  font-size: $gnav-font-size-mb;
+  line-height: 1.6;
+  letter-spacing: .05em;
+}
+
 @media screen and ( max-width: 899px ) {
   body.gnav_is-open {
     overflow: hidden;
@@ -41,11 +52,9 @@
   }
 
   a {
+    @extend %gnav-item;
     display: block;
     padding: .5em 0;
-    color: color(link);
-    font-size: 1.6rem;
-    letter-spacing: .05em;
     overflow: hidden;
 
     &:hover {
@@ -63,6 +72,10 @@
       position: relative;
       margin: 0 0 0 32px;
     }
+
+    a {
+      font-size: $gnav-font-size;
+    }
   }
 }
 
@@ -75,20 +88,26 @@
   &__name {
     position: relative;
     display: inline-block;
-    color: color(text);
-    font-size: 1.6rem;
-    // overflow: hidden;
+    @extend %gnav-item;
+  }
+
+
+  &__list {
+    a {
+      padding-left: 1em;
+      font-size: $gnav-font-size-sub;
+      line-height: 1.4;
+    }
   }
 
   @include mq(mid) {
     &__list {
       position: relative;
-      padding: 16px;
-      background: #fff;
+      padding: 24px;
+      background: color(bg);
 
       a {
         padding: 6px 0;
-        font-size: 1.4rem;
 
         &:hover {
           color: rgba(color(text), .6);
@@ -96,11 +115,16 @@
       }
     }
 
-    &__name:after {
-      @include arrow-brackets(15px, 2px, down, #fff);
-      position: relative;
-      margin-left: 8px;
+    &__name {
+      font-size: $gnav-font-size;
+
+      &:after {
+        @include arrow-brackets(15px, 2px, down, color(text));
+        position: relative;
+        margin-left: 8px;
+      }
     }
+    
 
     &:hover {
       cursor: pointer;
@@ -108,6 +132,7 @@
       #{$this}__content {
         pointer-events: auto;
         opacity: 1;
+        transform: translateY(0);
         visibility: visible;
         transition-delay: .05s;
       }
@@ -118,13 +143,16 @@
       top: 100%;
       left: -62px;
       width: 180px;
+      border-radius: 8px;
       overflow-y: hidden;
       z-index: 1000;
       pointer-events: none;
       opacity: 0;
       visibility: hidden;
+      transform: translateY(-10px);
       transition:
-        visibility .3s,
+        transform .35s,
+        visibility .35s,
         opacity .4s cubic-bezier(.19,1,.22,1);
       transition-delay: .15s;
       will-change: opacity;
@@ -137,19 +165,19 @@
 
 /* header onscroll
 ====================================== */
-@include mq(mid) {
-  .gnav_item__link,
-  .gnav_sub__name {
-    color: #fff;
-  }
+// @include mq(mid) {
+//   .gnav_item__link,
+//   .gnav_sub__name {
+//     color: #fff;
+//   }
 
-  [class*="-onscroll"] {
-    .gnav_item__link,
-    .gnav_sub__name {
-      color: #444;
-    }
-  }
-}
+//   [class*="-onscroll"] {
+//     .gnav_item__link,
+//     .gnav_sub__name {
+//       color: #444;
+//     }
+//   }
+// }
 
 
 

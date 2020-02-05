@@ -2,31 +2,10 @@
 * Article
 * ================================== */
 
-
-/* list
-============================ */
-.article_list {
-  @include grid(2, 32px 16px);
-  margin: 0 0 40px;
+.article {
+  $this: &;
 
   &__item {
-    grid-column: span 1;
-    grid-row: auto;
-    background: #fff;
-    border-radius: 4px;
-    overflow: hidden;
-
-    a {
-      display: block;
-      padding: 0 2rem 2rem;
-      color: #444;
-    }
-  }
-
-  &__thumb {
-    @include aspect-ratio(1.618, 1);
-    width: calc(100% + 4rem);
-    margin: 0 -2rem;
   }
 
   &__cat {
@@ -39,6 +18,30 @@
     font-size: 1.5rem;
     line-height: 2;
   }
+}
+
+/* list
+============================ */
+.article_list {
+
+  .article__item {
+    margin-top: 32px;
+
+    a {
+      display: block;
+      padding: 0 24px 24px;
+      color: #444;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
+
+  .article__thumb {
+    @include aspect-ratio(1.618, 1);
+    width: calc(100% + 48px);
+    margin: 0 -24px;
+  }
 
   &__link {
     display: inline-block;
@@ -47,17 +50,17 @@
   }
 
   @include mq(mid) {
-    @include grid(4, 0 32px);
+    display: flex;
+    margin: 0 -16px;
 
-    &__item {
-      grid-column: span 1;
+    .article__item {
+      padding: 0 16px;
 
       a {
         transition: $hover;
     
         &:hover {
-          color: color(primary, base);
-          opacity: .7;
+          color: color(accent);
         }
       }
     }

@@ -205,6 +205,10 @@
   @include mq(sm) {
     font-size: _rem(map-get($headlines, $size));
   }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 //@include fs_vw(13, 320);

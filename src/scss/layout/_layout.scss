@@ -62,8 +62,28 @@
 
 /* block
 ====================================== */
+.flex_block {
+  &__content {
 
-.block_split {
+  }
+
+  @include mq(mid) {
+    display: flex;
+
+    &__img {
+      width: 50%;
+      flex: 0 0 50%;
+    }
+
+    &__content {
+      width: 50%;
+      flex: 0 0 50%;
+      padding: 0 56px;
+    }
+  }
+}
+
+.grid_block {
   @include grid(1, 16px 24px);
   grid-template-areas:
     "head"
@@ -90,10 +110,11 @@
     grid-area: content;
   }
 
-  @include mq(medium) {
+  @include mq(mid) {
     @include grid(2, 24px 56px);
     grid-template-areas:
       "img head"
       "img content";
   }
 }
+
