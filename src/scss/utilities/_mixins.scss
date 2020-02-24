@@ -22,9 +22,10 @@
 //* Container
 // --------------------------------------- */
 // 最大幅あり
-@mixin container {
+@mixin container() {
   padding: 0 $pd-sm;
   margin: 0 auto;
+
 
   @include mq($main + 64px) {
     max-width: $main;
@@ -117,15 +118,6 @@
 
 
 
-//* Boxshadow
-// --------------------------------------- */
-//@include box-shadow(8px, 8px);
-@mixin box-shadow( $h: 0 , $v: 0 , $b: 0 , $s: 0 , $c: #000 ) {
-  box-shadow: $h $v $b $s $c;
-}
-
-
-
 //* clearfix
 // --------------------------------------- */
 //@extend %clearfix;
@@ -158,32 +150,8 @@
 
 
 
-//* before / after element
-// --------------------------------------- */
-//@include pseudo-element;
-//@include pseudo-element('foo', relative);
-@mixin pseudo-element( $position: absolute, $content: '' , $display: block) {
-  position: $position;
-  content: '';
-  display: $display;
-}
-
-
-
 //* Typography
 // --------------------------------------- */
-//@include vertical-align;
-// @mixin headline-base($size) {
-//   margin-bottom: map-get($headlines-mb-s, $size);
-//   font-size: map-get($headlines-s, $size);
-//   font-weight: $font-weight-head;
-//   line-height: map-get($headlines-line-height, $size);
-
-//   @include mq(sm) {
-//     margin-bottom: map-get($headlines-mb, $size);
-//     font-size: map-get($headlines, $size);
-//   }
-// }
 @mixin headline-base($size, $weight) {
   font-size: _rem(map-get($headlines-s, $size));
   font-weight: $weight;

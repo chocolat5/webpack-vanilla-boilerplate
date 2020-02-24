@@ -9,25 +9,24 @@
   overflow: hidden;
 }
 
-
+// 最大幅あり
 .section {
   padding: $pd-sec-sm 0;
-  //@include container-liquid;
 
   @include mq(mid) {
     padding: $pd-sec-mid 0;
   }
-
-  &-bg {
-    @extend .section;
-    background: color(bg);
-  }
 }
-
 
 .container {
   @include container;
 }
+
+
+// 最大幅なし（リキッド）
+// .section {
+//   @include container-liquid
+// }
 
 
 .section_ttl {

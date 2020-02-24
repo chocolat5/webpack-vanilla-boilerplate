@@ -2,11 +2,11 @@
 * Footer
 * ================================== */
 .footer {
-  padding: $pd-sec-mb;
+  padding: $pd-sec-sm 0;
   background: color(primary, base);
 
   @include mq(mid) {
-    padding: $pd-sec-tab;
+    padding: $pd-sec-mid 0;
   }
 }
 
