@@ -2,7 +2,7 @@ import { TweenMax } from 'gsap/TweenMax';
 
 ('use strict');
 
-const heroTtl = document.querySelector('.hero_ttl');
+const heroTtl = document.querySelector('.js_fade_in');
 const secTitles = document.querySelectorAll('.section_ttl');
 const animEls = document.querySelectorAll('.fade_in_down');
 

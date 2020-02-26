@@ -36,11 +36,14 @@ const getWindowSize = () => {
 loading
 -------------------------------- */
 export const showContent = () => {
-  setTimeout(() => spinner.classList.add('loaded'), 400);
-  setTimeout(() => loader.classList.add('loaded'), 600);
-  setTimeout(() => (content.style.display = 'block'), 500);
+  setTimeout(() => spinner.classList.add('loaded'), 200);
+  setTimeout(() => {
+    loader.classList.add('loaded');
+    content.style.display = 'block';
+  }, 400);
+
   // top
-  if (BODY.classList.contains('index')) setTimeout(() => topMv(), 1200);
+  if (BODY.classList.contains('index')) setTimeout(() => topMv(), 800);
 };
 
 /* -------------------------------
@@ -114,18 +117,27 @@ const showNav = () => {
   });
 };
 
-//DOMツリー解析後
+navBtn.addEventListener('click', e => toggleMenu(e));
+
+
+/* -------------------------------
+load
+-------------------------------- */
+// DOMツリー解析後
 window.addEventListener('DOMContentLoaded', () => {
   getWindowSize();
   if (isMobile) hideNav();
 });
 
-//ページ内の全てのリソース読み込み完了後
+// ページ内の全てのリソース読み込み完了後
 window.addEventListener('load', () => {
   showContent();
   onWindowScroll();
 });
 
+/* -------------------------------
+resize
+-------------------------------- */
 window.addEventListener('resize', () => {
   navItems.forEach(navItem => {
     navItem.style.opacity = 1;
@@ -136,10 +148,13 @@ window.addEventListener('scroll', () => {
   onWindowScroll();
 });
 
+
+/* -------------------------------
+click
+-------------------------------- */
 anchors.forEach(anchor =>
   anchor.addEventListener('click', function(e) {
     moveTo(this, e);
   })
 );
 
-navBtn.addEventListener('click', e => toggleMenu(e));
