@@ -35,7 +35,7 @@ const getWindowSize = () => {
 /* -------------------------------
 loading
 -------------------------------- */
-export const showContent = () => {
+const showContent = () => {
   setTimeout(() => spinner.classList.add('loaded'), 200);
   setTimeout(() => {
     loader.classList.add('loaded');

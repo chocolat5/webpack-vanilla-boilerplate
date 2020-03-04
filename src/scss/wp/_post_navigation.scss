@@ -1,0 +1,36 @@
+/*  post navigation
+====================================== */
+.posts-navigation {
+
+  .nav-previous {
+    width: 50%;
+    margin-right: auto;
+    padding-right: 1em;
+    text-align: right;
+  }
+
+  .nav-next {
+    width: 50%;
+    margin-left: auto;
+    padding-left: 1em;
+    text-align: left;
+  }
+
+}
+
+.post-navigation {
+  max-width: 400px;
+  margin: 0 auto;
+
+  .nav-previous {
+    width: 50%;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .nav-next {
+    width: 50%;
+    margin-left: auto;
+    text-align: right;
+  }
+}

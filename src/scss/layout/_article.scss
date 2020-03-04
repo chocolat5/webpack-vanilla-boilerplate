@@ -20,8 +20,67 @@
   }
 }
 
-/* list
+
+.cat_list {
+  margin: 0 0 32px;
+
+  li {
+    display: inline-block;
+    margin: 0 4px 0 0;
+  }
+
+  a {
+    display: block;
+    height: 32px;
+    padding: 0 .6em;
+    background: #fff;
+    border: 2px solid #252525;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    font-family: $ff-head;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .current-cat a {
+    color: color(sub3);
+    border-color: color(sub3);
+  }
+
+
+  @include mq(medium) {
+    li {
+      margin: 0 8px;
+    }
+
+    a {
+      padding: .3em 1.2em;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+/* archive
 ============================ */
+.archive_container {
+  .archive_content {
+    width: 100%;
+  }
+
+  @include mq(mid) {
+    display: flex;
+    justify-content: space-between;
+
+    .archive_content {
+      width: 68.3%;
+      flex: 0 0 68.3%;
+    }
+  }
+}
+
+
 .article_list {
 
   .article__item {

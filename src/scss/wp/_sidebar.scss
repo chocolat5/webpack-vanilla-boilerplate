@@ -1,16 +1,44 @@
 /*  sidebar
 ====================================== */
 .widget_area {
-  width: 27%;
-  flex: 0 0 27%;
+  width: 100%;
 }
 
-.widget-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  border-bottom: 1px solid color(text);
+.widget {
+  .widget-title {
+    display: none;
+  }
+
+  & > ul > .cat-item > a {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-family: $ff-head;
+    text-decoration: underline;
+  }
+
+  & > ul > .cat-item + .cat-item {
+    margin-top: 1em;
+  }
+
+  & + .widget {
+    margin-top: 40px;
+  }
+
+  .children {
+    margin-left: 1em;
+  }
 }
 
-.widget + .widget {
-  margin-top: 40px;
+
+@include mq(mid) {
+  .widget_area {
+    width: 27%;
+    flex: 0 0 27%;
+  }
+
+  .widget {
+    & > ul > .cat-item + .cat-item {
+      margin-top: 1.5em;
+    }
+  }
 }
