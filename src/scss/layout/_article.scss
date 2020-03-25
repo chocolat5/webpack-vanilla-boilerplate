@@ -37,7 +37,6 @@
     border: 2px solid #252525;
     border-radius: 4px;
     font-size: 1.6rem;
-    font-family: $ff-head;
     font-weight: 500;
     line-height: 28px;
     text-align: center;
@@ -134,14 +133,20 @@
   max-width: 560px;
   margin: 0 auto;
 
+  &__ttl,
   h1 {
     @include headline-base(h1, bold);
+    margin-bottom: 10px;
+  }
+
+  .article__date,
+  .article__cat {
+    display: inline-block;
+    margin: 10px 0 24px;
   }
 
   h2 {
     @include headline-base(h2, bold);
-    padding-bottom: 8px;
-    border-bottom: 2px solid color(primary, base);
   }
 
   h3 {
@@ -153,12 +158,19 @@
   }
 
   p, ul {
-    margin-bottom: 24px;
+    margin: 24px 0;
   }
 
   li {
     padding-left: 1em;
     list-style: disc;
     list-style-position: inside;
+  }
+
+  @include mq(mid) {
+
+    p, ul {
+      margin: 40px 0;
+    }
   }
 }

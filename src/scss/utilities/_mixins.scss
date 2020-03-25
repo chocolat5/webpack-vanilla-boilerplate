@@ -153,6 +153,7 @@
 //* Typography
 // --------------------------------------- */
 @mixin headline-base($size, $weight) {
+  font-size: #{map-get($headlines-s, $size)}px;
   font-size: _rem(map-get($headlines-s, $size));
   font-weight: $weight;
   line-height: _line_height(map-get($headlines, $size));
@@ -162,7 +163,7 @@
     margin-bottom: #{$line-height-base-px * 2}px;
   }
   @else if ($size == h2) {
-    margin-top: #{$line-height-base-px}px;
+    margin-top: #{$line-height-base-px * 2}px;
     margin-bottom: #{$line-height-base-px}px;
   }
   @else {
@@ -171,6 +172,7 @@
   }
 
   @include mq(sm) {
+    font-size: #{map-get($headlines, $size)}px;
     font-size: _rem(map-get($headlines, $size));
   }
 

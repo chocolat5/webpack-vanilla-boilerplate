@@ -83,7 +83,7 @@ $font-size-base-px: 14;
 $font-size-pc-px: 16;
 $font-weight: 400;
 $font-family: 'Work Sans','游ゴシック Medium', 'Yu Gothic Medium', YuGothic, '游ゴシック体', '游ゴシック', "Hiragino Kaku Gothic ProN", 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
-$line-height-base-px: 29;
+$line-height-base-px: 28;
 
 
 //Headline
@@ -95,8 +95,8 @@ $headlines-s: (
 ) !default;
 
 $headlines: (
-  h1: 27,
-  h2: 22,
+  h1: 44,
+  h2: 24,
   h3: 18,
-  h4: 14,
+  h4: 16,
 ) !default;

@@ -20,5 +20,9 @@
 
 // line-height
 @function _line_height($px) {
-  @return ($line-height-base-px / $px);
+  @if ($px > $line-height-base-px) {
+    @return ($px / $line-height-base-px);
+  } @else {
+    @return ($line-height-base-px / $px);
+  }
 }
