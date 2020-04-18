@@ -20,7 +20,8 @@ module.exports = {
     }]),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'assets/css/style.css'
+      filename: 'assets/css/style.css',
+      chunkFilename: 'assets/css/[id].css',
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
