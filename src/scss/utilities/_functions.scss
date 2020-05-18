@@ -26,3 +26,7 @@
     @return ($line-height-base-px / $px);
   }
 }
+
+@function _line_height2($px) {
+  @return (($line-height-base-px * 2) / $px) + em;
+}

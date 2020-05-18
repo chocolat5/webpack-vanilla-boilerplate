@@ -153,23 +153,25 @@
 //* Typography
 // --------------------------------------- */
 @mixin headline-base($size, $weight) {
+  margin-top: #{$line-height-base-px / map-get($headlines, $size)}em;
+  margin-bottom: #{$line-height-base-px / map-get($headlines, $size)}em;
   font-size: #{map-get($headlines-s, $size)}px;
   font-size: _rem(map-get($headlines-s, $size));
   font-weight: $weight;
-  line-height: _line_height(map-get($headlines, $size));
+  line-height: _line_height2(map-get($headlines, $size));
 
   @if($size == h1) {
-    margin-top: #{$line-height-base-px}px;
-    margin-bottom: #{$line-height-base-px * 2}px;
+    // margin-top: #{$line-height-base-px / $line-height-base-px}em;
+    // margin-bottom: #{$line-height-base-px * 2}px;
   }
   @else if ($size == h2) {
-    margin-top: #{$line-height-base-px * 2}px;
-    margin-bottom: #{$line-height-base-px}px;
+    // margin-top: #{$line-height-base-px * 2}px;
+    // margin-bottom: #{$line-height-base-px}px;
   }
-  @else {
-    margin-top: #{$line-height-base-px}px;
-    margin-bottom: 0;
-  }
+  // @else {
+  //   margin-top: #{$line-height-base-px}px;
+  //   margin-bottom: 0;
+  // }
 
   @include mq(sm) {
     font-size: #{map-get($headlines, $size)}px;
