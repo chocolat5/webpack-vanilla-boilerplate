@@ -22,6 +22,27 @@ $gnav-font-size: 1.6rem;
   &__inner {
   }
 
+  &__list {
+    padding: 80px 40px 48px;
+
+  }
+
+  &__item {
+    margin: 0 0 1em;
+    text-align: left;
+  }
+
+  &__link {
+    @extend %gnav-item;
+    display: block;
+    padding: .5em 0;
+    overflow: hidden;
+
+    &:hover {
+      color: color(accent);
+    }
+  }
+
   @media screen and ( max-width: 899px ) {
     position: fixed;
     top: 0;
@@ -39,45 +60,26 @@ $gnav-font-size: 1.6rem;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
-  }
-}
 
-
-.gnav_list {
-  padding: 80px 40px 48px;
-
-  &__item {
-    margin: 0 0 1em;
-    text-align: left;
-  }
-
-  a {
-    @extend %gnav-item;
-    display: block;
-    padding: .5em 0;
-    overflow: hidden;
-
-    &:hover {
-      color: color(accent);
+    &__list {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      padding: 0;
     }
-  }
-
-  @include mq(mid) {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    padding: 0;
 
     &__item {
       position: relative;
       margin: 0 0 0 32px;
     }
 
-    a {
+    &__link {
       font-size: $gnav-font-size;
     }
   }
+  
 }
+
 
 
 /* globalnav sub
