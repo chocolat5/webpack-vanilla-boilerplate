@@ -23,7 +23,7 @@ $gnav-font-size: 1.6rem;
   }
 
   &__list {
-    padding: 80px 40px 48px;
+    padding: 48px 40px;
 
   }
 
@@ -60,7 +60,9 @@ $gnav-font-size: 1.6rem;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
-
+  }
+  
+  @include mq(mid) {
     &__list {
       display: flex;
       align-items: center;
@@ -69,15 +71,15 @@ $gnav-font-size: 1.6rem;
     }
 
     &__item {
-      position: relative;
-      margin: 0 0 0 32px;
+      margin: 0 0 0 2em;
+      text-align: center;
     }
 
     &__link {
       font-size: $gnav-font-size;
     }
+    
   }
-  
 }
 
 
