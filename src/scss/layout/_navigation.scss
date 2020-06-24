@@ -12,11 +12,13 @@ $gnav-font-size: 1.6rem;
   letter-spacing: .05em;
 }
 
+/* body fixed */
 @media screen and ( max-width: 899px ) {
   body.gnav_is-open {
     overflow: hidden;
   }
 }
+
 
 .gnav {
   &__inner {
@@ -72,7 +74,6 @@ $gnav-font-size: 1.6rem;
 
     &__item {
       margin: 0 0 0 2em;
-      text-align: center;
     }
 
     &__link {
@@ -88,6 +89,7 @@ $gnav-font-size: 1.6rem;
 ====================================== */
 .gnav_sub {
   $this: &;
+  position: relative;
 
   &__name {
     position: relative;
@@ -225,7 +227,6 @@ $gnav-font-size: 1.6rem;
     background: none;
     border: 0;
     position: absolute;
-    top: calc(50% - 12px);
     left: 0;
     right: 0;
     display: block;
