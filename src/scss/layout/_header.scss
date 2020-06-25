@@ -3,6 +3,7 @@
 * ================================== */
 .header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   height: $header-h-mb;
@@ -27,6 +28,10 @@
     transition:
       background .4s  cubic-bezier(.19,1,.22,1),
       min-height .3s cubic-bezier(.19,1,.22,1);
-  }
 
+    &__logo {
+      width: 78px;
+      flex: 0 0 78px;
+    }
+  }
 }

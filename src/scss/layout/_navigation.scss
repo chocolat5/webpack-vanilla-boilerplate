@@ -65,10 +65,11 @@ $gnav-font-size: 1.6rem;
   }
   
   @include mq(mid) {
+    margin-left: auto;
+
     &__list {
       display: flex;
       align-items: center;
-      margin-left: auto;
       padding: 0;
     }
 
