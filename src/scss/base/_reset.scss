@@ -63,6 +63,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: color('text');
+  background-color: color('bg');
   font: $font-weight _rem($font-size-base-px) #{'/'} _line_height($font-size-base-px) $font-family;
   -moz-font-feature-settings : 'palt' 1;
   font-feature-settings : 'palt' 1;
@@ -76,11 +77,13 @@ img {
   max-width: 100%;
   height: auto;
   line-height: 0;
+  vertical-align: bottom;
 }
 
 a {
   color: color(link);
   text-decoration: none;
+  transition: $hover;
 
   &:hover {
     color: rgba(color(text), .6);
