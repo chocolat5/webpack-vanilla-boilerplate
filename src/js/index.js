@@ -2,7 +2,7 @@ import { TweenMax } from 'gsap/TweenMax';
 
 ('use strict');
 
-const heroTtl = document.querySelector('.js_fade_in');
+const heroTitle = document.querySelector('.js_fade_in');
 const secTitles = document.querySelectorAll('.section_ttl');
 const animEls = document.querySelectorAll('.fade_in_down');
 
@@ -11,7 +11,7 @@ const animEls = document.querySelectorAll('.fade_in_down');
 Hero Area Animation
 -------------------------------- */
 export const topMv = () => {
-  TweenMax.fromTo(heroTtl, 0.35, {
+  TweenMax.fromTo(heroTitle, 0.35, {
     y: '-30px',
     opacity: 0,
     ease: Quint.easeInOutSine
@@ -74,7 +74,7 @@ const scollMv = () => {
 
 //DOMツリー解析後
 window.addEventListener('DOMContentLoaded', () => {
-  heroTtl.style.opacity = 0;
+  heroTitle.style.opacity = 0;
   animEls.forEach(animEl => animEl.style.opacity = 0);
   secTitles.forEach(secTitle => secTitle.style.opacity = 0);
 });

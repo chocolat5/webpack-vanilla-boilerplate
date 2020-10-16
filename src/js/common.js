@@ -135,26 +135,27 @@ window.addEventListener('load', () => {
   onWindowScroll();
 });
 
-/* -------------------------------
-resize
--------------------------------- */
-window.addEventListener('resize', () => {
-  navItems.forEach(navItem => {
-    navItem.style.opacity = 1;
-  });
-});
-
-window.addEventListener('scroll', () => {
-  onWindowScroll();
-});
-
 
 /* -------------------------------
-click
+Event Listeners
 -------------------------------- */
-anchors.forEach(anchor =>
-  anchor.addEventListener('click', function(e) {
-    moveTo(this, e);
-  })
-);
+document.onreadystatechange = function () {
+  if (document.readyState === 'complete') {
+    anchors.forEach(anchor =>
+      anchor.addEventListener('click', function(e) {
+        moveTo(this, e);
+      })
+    );
+
+    window.addEventListener('resize', () => {
+      navItems.forEach(navItem => {
+        navItem.style.opacity = 1;
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      onWindowScroll();
+    });
+  }
+}
 
