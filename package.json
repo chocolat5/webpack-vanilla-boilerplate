@@ -16,7 +16,7 @@
     "buildall": "npm-run-all buildall:*"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
+    "@babel/cli": "^7.12.1",
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
     "autoprefixer": "^9.7.3",
