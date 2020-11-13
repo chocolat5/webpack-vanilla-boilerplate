@@ -3,6 +3,11 @@
 * ================================== */
 .form {
 
+  // [type="date"],
+  // [type="email"],
+  // [type="password"],
+  // [type="search"],
+  // [type="text"],
   input,
   button,
   textarea,
@@ -17,6 +22,14 @@
     color: inherit;
     font-size: inherit;
   }
+
+  // [type="checkbox"],
+  // [type="radio"] {
+  //   outline: none;
+  //   margin: 0;
+  //   padding: 0;
+  //   border-radius: 0;
+  // }
 
   ::-ms-reveal {
     display: none;
@@ -54,7 +67,7 @@
     cursor: pointer
   }
 
-  button {
+  [type="submit"] {
     display: block;
     width: 100%;
     margin: 24px auto 16px;

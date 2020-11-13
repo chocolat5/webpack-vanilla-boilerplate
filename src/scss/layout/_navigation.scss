@@ -22,12 +22,8 @@ $gnav-font-size: 1.6rem;
 
 
 .gnav {
-  &__inner {
-  }
-
   &__list {
     padding: 48px 40px;
-
   }
 
   &__item {
@@ -76,7 +72,9 @@ $gnav-font-size: 1.6rem;
     }
 
     &__item {
+      flex-shrink: 1;
       margin: 0 0 0 2em;
+      white-space: nowrap;
     }
 
     &__link {
