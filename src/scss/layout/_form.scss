@@ -82,6 +82,8 @@
   }
 
   .field {
+    position: relative;
+
     & + .field {
       margin-top: 32px;
     }
@@ -120,6 +122,10 @@
       font-size: 1.4rem;
     }
 
+    a {
+      text-decoration: underline;
+    }
+
     select {
       background-image: url(../img/common/chevron-down.svg);
       background-position: right 20px center;
@@ -127,9 +133,13 @@
       background-size: 16px;
     }
 
-    [type="radio"] {
-      display: none;
+    [type="radio"],
+    [type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+    }
 
+    [type="radio"] {
       & + label {
         position:relative;
         display: inline-block;
@@ -146,6 +156,7 @@
           display: block;
           position: absolute;
         }
+
         &:before {
           top: calc(50% - 8px);
           left: 8px;
@@ -154,6 +165,7 @@
           border: 1px solid color(sub2);
           border-radius: 50%;
         }
+
         &:after {
           top: calc(50% - 4px);
           left: 12px;
@@ -163,6 +175,7 @@
           border-radius: 50%;
         }
       }
+
       &:checked {
         & + label {
           color:color(primary, base);
@@ -175,8 +188,6 @@
     }
 
     [type="checkbox"] {
-      display: none;
-
       & + label {
         position:relative;
         display: inline-block;
@@ -188,9 +199,10 @@
         &:before,
         &:after {
           content: '';
-          display: block;
+          display: inline-block;
           position: absolute;
         }
+
         &:before {
           top: calc(50% - 8px);
           left: 0;
@@ -198,18 +210,25 @@
           height: 16px;
           border: 1px solid color(sub2);
         }
+
         &:after {
           top: calc(50% - 6px);
-          left: 3px;
+          left: 2px;
           width: 12px;
           height: 12px;
           background-position: 0 0;
           background-repeat: no-repeat;
         }
       }
+
       &:checked {
+        & + label:before {
+          background: color(primary, base);
+          border-color: color(primary, base);
+        }
+
         & + label:after {
-          background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20enable-background%3D%22new%200%200%2064%2064%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%20id%3D%22eye%22%3E%20%3Cpath%20fill%3D%22%23444%22%20d%3D%22M16.074%2C55.049c0.369%2C0.534%2C0.975%2C0.838%2C1.615%2C0.838c0.133%2C0%2C0.269-0.049%2C0.404-0.076%20c0.098%2C0.016%2C0.193%2C0.064%2C0.292%2C0.064c0.575%2C0%2C1.134-0.249%2C1.526-0.681l43.514-43.521c0.785-0.784%2C0.785-2.056%2C0-2.841%20c-0.784-0.784-2.056-0.784-2.84%2C0l-42.52%2C42.526L3.725%2C37.021c-0.784-0.785-2.056-0.785-2.84%2C0c-0.785%2C0.784-0.785%2C2.056%2C0%2C2.841%20L16.074%2C55.049z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+          background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20enable-background%3D%22new%200%200%2064%2064%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%20id%3D%22eye%22%3E%20%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M16.074%2C55.049c0.369%2C0.534%2C0.975%2C0.838%2C1.615%2C0.838c0.133%2C0%2C0.269-0.049%2C0.404-0.076%20c0.098%2C0.016%2C0.193%2C0.064%2C0.292%2C0.064c0.575%2C0%2C1.134-0.249%2C1.526-0.681l43.514-43.521c0.785-0.784%2C0.785-2.056%2C0-2.841%20c-0.784-0.784-2.056-0.784-2.84%2C0l-42.52%2C42.526L3.725%2C37.021c-0.784-0.785-2.056-0.785-2.84%2C0c-0.785%2C0.784-0.785%2C2.056%2C0%2C2.841%20L16.074%2C55.049z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
           background-size: contain;
         }
       }
