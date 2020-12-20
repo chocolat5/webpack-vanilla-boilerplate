@@ -6,7 +6,11 @@
 
 .widget {
   .widget-title {
-    display: none;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .05em;
   }
 
   & > ul > .cat-item > a {
