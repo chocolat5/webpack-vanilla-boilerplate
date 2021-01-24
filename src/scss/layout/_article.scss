@@ -10,12 +10,12 @@
 
   &__cat {
     margin: 1em 0;
-    font-size: 1.3rem;
+    @include fs_clamp(1.2rem, 2.5vw, 1.3rem);
     opacity: .7;
   }
 
   &__ttl {
-    font-size: 1.5rem;
+    @include fs_clamp(1.5rem, 2.5vw, 1.7rem);
     line-height: 2;
   }
 }
@@ -36,8 +36,7 @@
     background: #fff;
     border: 2px solid #252525;
     border-radius: 4px;
-    font-size: 1.6rem;
-    font-weight: 500;
+    @include fs_clamp(1.5rem, 2.5vw, 1.6rem, 500);
     line-height: 28px;
     text-align: center;
   }
@@ -55,7 +54,6 @@
 
     a {
       padding: .3em 1.2em;
-      font-size: 1.5rem;
     }
   }
 }
@@ -103,7 +101,7 @@
 
   &__link {
     display: inline-block;
-    font-size: 1.4rem;
+    @include fs_clamp(1.4rem, 2.5vw, 1.5rem);
     border-bottom: 2px solid #ccc;
   }
 
@@ -136,7 +134,7 @@
 
   &__ttl,
   h1 {
-    @include headline-base(h1, bold);
+    @include fs_clamp(2.8rem, 4vw, 4.8rem, bold);
   }
 
   .article__date,
@@ -146,15 +144,15 @@
   }
 
   h2 {
-    @include headline-base(h2, bold);
+    @include fs_clamp(2.4rem, 2.5vw, 3.6rem, bold);
   }
 
   h3 {
-    @include headline-base(h3, bold);
+    @include fs_clamp(1.8rem, 2.5vw, 2rem, bold);
   }
 
   h4 {
-    @include headline-base(h4, bold);
+    @include fs_clamp(1.6rem, 2.5vw, 1.6rem, bold);
   }
 
   p, ul {

@@ -21,8 +21,7 @@ index
   max-width: 750px;
   margin: 0 auto;
   color: #fff;
-  font-size: 3.2rem;
-  font-weight: 700;
+  @include fs_clamp(3.2rem, 4vw, 6.4rem, 700);
   line-height: 1.2;
   letter-spacing: .1em;
   text-align: left;
@@ -30,7 +29,6 @@ index
 
 @include mq(sm) {
   .hero_copy {
-    font-size: 6.4rem;
     line-height: 1.1;
   }
 }
@@ -114,12 +112,11 @@ index
   }
 
   &__ttl {
-    font-size: 2rem;
-    font-weight: 500;
+    @include fs_clamp(2rem, 4vw, 2.4rem, 600);
   }
 
   &__desc {
-    font-size: 1.4rem;
+    @include fs_clamp(1.4rem, 2.5vw, 1.6rem);
     line-height: 1.6;
   }
 
@@ -149,13 +146,13 @@ index
     span {
       display: inline-block;
       margin: 0 1em .8em 0;
-      font-size: 1.4rem;
+      @include fs_clamp(1.4rem, 2.5vw, 1.5rem);
       line-height: 1.8;
     }
   }
 
   &__ttl {
-    font-size: 1.6rem;
+    @include fs_clamp(1.6rem, 2.5vw, 1.8rem);
     font-weight: bold;
     line-height: 1.8;
   }

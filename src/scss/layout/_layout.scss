@@ -29,33 +29,53 @@
 // }
 
 
-.section_ttl {
-  @include headline-base(h2, bold);
-  text-align: center;
-
-  span {
-    display: block;
-    font-size: .6em;
-    font-weight: 400;
-  }
-
-  @include mq(mid) {
-    span {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-.section_lead {
-  font-size: 1.6rem;
-  line-height: 2;
-}
-
 .alignc { text-align: center; }
 .alignr { text-align: right; }
 .alignl { text-align: left; }
 
 
+
+/* Typography
+====================================== */
+.headline-1 {
+  @include fs_clamp(2.4rem, 4vw, 4.8rem, bold);
+}
+
+.headline-2 {
+  @include fs_clamp(2.4rem, 2.5vw, 3.6rem, bold);
+}
+
+.headline-3 {
+  @include fs_clamp(1.8rem, 2.5vw, 2rem, bold);
+}
+
+.headline-4 {
+  @include fs_clamp(1.6rem, 2.5vw, 1.6rem, bold);
+}
+
+p, li {
+  @include fs_clamp(1.4rem, 2.5vw, 1.6rem);
+}
+
+.section_ttl {
+  @include fs_clamp(2.4rem, 4vw, 4.8rem, bold);
+  line-height: 1.4;
+  text-align: center;
+
+  span {
+    display: block;
+    @include fs_clamp(1.4rem, 2.5vw, 1.6rem);
+    line-height: 1.2;
+  }
+
+  @include mq(mid) {
+  }
+}
+
+.section_lead {
+  @include fs_clamp(1.4rem, 2.5vw, 1.6rem);
+  line-height: 2;
+}
 
 
 
@@ -106,7 +126,6 @@
 
   &__head {
     grid-area: head;
-    @include headline-base(h3, bold);
   }
 
   &__img {

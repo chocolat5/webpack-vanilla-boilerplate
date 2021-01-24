@@ -78,25 +78,9 @@ $hover: all .3s ease;
 //* Typography
 // --------------------------------------- */
 
-//Body
+// Body
 $font-size-base-px: 14;
 $font-size-pc-px: 16;
 $font-weight: 400;
 $font-family: 'Work Sans','游ゴシック Medium', 'Yu Gothic Medium', YuGothic, '游ゴシック体', '游ゴシック', "Hiragino Kaku Gothic ProN", 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
 $line-height-base-px: 25.2;
-
-
-//Headline
-$headlines-s: (
-  h1: 24,
-  h2: 20,
-  h3: 16,
-  h4: 14,
-) !default;
-
-$headlines: (
-  h1: 44,
-  h2: 24,
-  h3: 18,
-  h4: 16,
-) !default;
