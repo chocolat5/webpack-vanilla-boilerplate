@@ -9,6 +9,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const IS_DEV = (process.env.NODE_ENV === 'dev');
 
 module.exports = {
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      config: [__filename]
+    }
+  },
   entry: {
     common: './src/js/common.js',
     index: './src/js/index.js'
@@ -37,7 +43,7 @@ module.exports = {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all'
+          // chunks: 'all'
         }
       }
     }
