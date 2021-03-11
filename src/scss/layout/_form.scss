@@ -39,11 +39,11 @@
     display: none;
   }
 
-  :placeholder-shown { color: color(sub2); }
-  :-webkit-input-placeholder { color: color(sub2); }
-  :-ms-input-placeholder { color: color(sub2); }
-  :-moz-placeholder { color: color(sub2); }
-  ::placeholder { color: color(sub2); }
+  :placeholder-shown { color: var(--color-notion); }
+  :-webkit-input-placeholder { color: var(--color-notion); }
+  :-ms-input-placeholder { color: var(--color-notion); }
+  :-moz-placeholder { color: var(--color-notion); }
+  ::placeholder { color: var(--color-notion); }
 
   [type="date"],
   [type="email"],
@@ -73,11 +73,11 @@
     margin: 24px auto 16px;
     padding: 16px 0;
     color: #fff;
-    background:color(primary, base);
+    background:var(--color-primary);
     transition: $hover;
 
     &:hover {
-      background-color: lighten(color(primary, base), 8);
+      background-color: rgba(var(--color-primary), 8);
     }
   }
 
@@ -96,13 +96,13 @@
     select,
     textarea {
       background: #fff;
-      border-radius: 4px;
+      border-radius: var(--radius);
       padding: 16px;
-      border: 1px solid color(sub2);
+      border: 1px solid var(--color-notion);
       letter-spacing: .05em;
 
       &:focus {
-        border-color:color(primary, base);
+        border-color:var(--color-primary);
       }
     }
 
@@ -118,7 +118,7 @@
     .field_type {
       display: block;
       margin: 0 0 8px;
-      color: rgba(color(text), .5);
+      color: rgba(var(--color-text), .5);
       font-size: 1.4rem;
     }
 
@@ -145,9 +145,9 @@
         display: inline-block;
         margin: 0 8px 0 0;
         padding: 8px 12px 8px 32px;
-        color: rgba(color(text), .5);
-        border: 1px solid color(sub2);
-        border-radius: 4px;
+        color: rgba(var(--color-text), .5);
+        border: 1px solid var(--color-notion);
+        border-radius: var(--radius);
         cursor: pointer;
 
         &:before,
@@ -162,7 +162,7 @@
           left: 8px;
           width: 16px;
           height: 16px;
-          border: 1px solid color(sub2);
+          border: 1px solid var(--color-notion);
           border-radius: 50%;
         }
 
@@ -171,18 +171,18 @@
           left: 12px;
           width: 8px;
           height: 8px;
-          background: rgba(color(sub2), .5);
+          background: rgba(var(--color-notion), .5);
           border-radius: 50%;
         }
       }
 
       &:checked {
         & + label {
-          color:color(primary, base);
-          border-color:color(primary, base);
+          color:var(--color-primary);
+          border-color:var(--color-primary);
         }
         & + label:after {
-          background:color(primary, base);
+          background:var(--color-primary);
         }
       }
     }
@@ -208,7 +208,7 @@
           left: 0;
           width: 16px;
           height: 16px;
-          border: 1px solid color(sub2);
+          border: 1px solid var(--color-notion);
         }
 
         &:after {
@@ -223,8 +223,8 @@
 
       &:checked {
         & + label:before {
-          background: color(primary, base);
-          border-color: color(primary, base);
+          background: var(--color-primary);
+          border-color: var(--color-primary);
         }
 
         & + label:after {

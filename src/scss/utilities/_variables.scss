@@ -47,29 +47,6 @@ $header-h-tab: 120px;
 
 
 
-//* Colors
-// --------------------------------------- */
-$colors: (
-  text: #444,
-  link: #444,
-
-  bg: #f2f2f2,
-
-  primary: (
-    base: #fed058,
-    light: lighten(#fed058, 5),
-    dark: darken(#fed058, 5),
-    trans: transparentize(#fed058, .5),
-  ),
-  second: rgba(#fed058, .2),
-  sub: #fdfde2,
-  sub2: #e0e0e0,
-  accent: #e0e0e0,
-) !default;
-
-
-
-
 //* Transition
 // --------------------------------------- */
 $hover: all .3s ease;
@@ -82,5 +59,34 @@ $hover: all .3s ease;
 $font-size-base-px: 14;
 $font-size-pc-px: 16;
 $font-weight: 400;
-$font-family: 'Work Sans','游ゴシック Medium', 'Yu Gothic Medium', YuGothic, '游ゴシック体', '游ゴシック', "Hiragino Kaku Gothic ProN", 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
 $line-height-base-px: 25.2;
+
+
+
+//* Custom Property
+// --------------------------------------- */
+:root {
+  --color-text: #444;
+  --color-background: #f2f2f2;
+
+  --color-primary: #fed058;
+  --color-secondary: #fed058;
+  --color-sub: #fdfde2;
+  --color-sub2: #e0e0e0;
+  --color-accent: #e0e0e0;
+  --color-gray: #e0e0e0;
+
+  --color-notion: #999;
+  --color-warning: ;
+  --color-gradient: ;
+
+  --radius-sm: 2px;
+  --radius: 4px;
+  --radius-lg: 8px;
+
+  --shadow: 0px 2px 9px rgba(0,0,0,0.23);
+
+  --font-family-sans: 'Work Sans','游ゴシック Medium', 'Yu Gothic Medium', YuGothic, '游ゴシック体', '游ゴシック', "Hiragino Kaku Gothic ProN", 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
+  --font-family-serif: 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
+
+}

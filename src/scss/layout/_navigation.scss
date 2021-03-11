@@ -6,7 +6,7 @@ $gnav-font-size-sub: 1.6rem;
 $gnav-font-size: 1.6rem;
 
 %gnav-item {
-  color: color(link);
+  color: var(--color-text);
   font-size: $gnav-font-size-mb;
   line-height: 1.6;
   letter-spacing: .05em;
@@ -38,7 +38,7 @@ $gnav-font-size: 1.6rem;
     overflow: hidden;
 
     &:hover {
-      color: color(accent);
+      color: var(--color-accent);
     }
   }
 
@@ -50,7 +50,7 @@ $gnav-font-size: 1.6rem;
     right: 0;
     height: 100%;
     height: 100vh;
-    background: color(bg);
+    background: var(--color-background);
     z-index: 8000;
 
     &__inner {
@@ -111,13 +111,13 @@ $gnav-font-size: 1.6rem;
     &__list {
       position: relative;
       padding: 24px;
-      background: color(bg);
+      background: var(--color-background);
 
       a {
         padding: 6px 0;
 
         &:hover {
-          color: rgba(color(text), .6);
+          color: rgba(var(--color-text), .6);
         }
       }
     }
@@ -126,7 +126,7 @@ $gnav-font-size: 1.6rem;
       font-size: $gnav-font-size;
 
       &:after {
-        @include arrow-brackets(15px, 2px, down, color(text));
+        @include arrow-brackets(15px, 2px, down, var(--color-text));
         position: relative;
         margin-left: 8px;
       }
