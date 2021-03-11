@@ -1,7 +1,7 @@
 /*
 * Layout
 * ================================== */
-.wrapper {
+.l_wrapper {
   position: relative;
   height: auto;
   min-height: 100%;
@@ -10,7 +10,7 @@
 }
 
 // 最大幅あり
-.section {
+.l_section {
   padding: $pd-sec-sm 0;
 
   @include mq(mid) {
@@ -18,7 +18,7 @@
   }
 }
 
-.container {
+.l_container {
   @include container;
 }
 

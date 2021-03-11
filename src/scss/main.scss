@@ -12,7 +12,7 @@
 
 
 /* Base */
-@import 'base/_reset';
+@import 'base/_base';
 
 
 /* Layout */
@@ -22,7 +22,8 @@
   'layout/_header',
   'layout/_navigation',
   'layout/_footer',
-  'layout/_article';
+  'layout/_article',
+  'layout/_news';
 
 
 /* Components */

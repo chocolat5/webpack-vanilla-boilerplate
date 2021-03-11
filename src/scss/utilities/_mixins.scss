@@ -5,6 +5,12 @@
 
 //* Mediaquery
 // --------------------------------------- */
+@mixin screen-small {
+  @media screen and (min-width: map-get($breakpoints, 'sm') - 1) {
+    @content;
+  }
+}
+
 @mixin mq($point) {
   @if map-has-key($breakpoints, $point) {
     @media screen and (min-width: map-get($breakpoints, $point)) {
@@ -13,7 +19,9 @@
   }
 
   @else {
-    @media screen and (min-width: $point) { @content; }
+    @media screen and (min-width: $point) {
+      @content;
+    }
   }
 }
 
