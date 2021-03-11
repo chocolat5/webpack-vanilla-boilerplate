@@ -1,7 +1,6 @@
 /*
 * Article
 * ================================== */
-
 .article {
   $this: &;
 
@@ -42,8 +41,8 @@
   }
 
   .current-cat a {
-    color: color(sub3);
-    border-color: color(sub3);
+    color: var(--color-sub2);
+    border-color: var(--color-sub2);
   }
 
 
@@ -78,15 +77,15 @@
 }
 
 
-.article_list {
+.articleList {
 
-  .article__item {
+  &__item {
     margin-top: 32px;
 
     a {
       display: block;
       padding: 0 24px 24px;
-      color: #444;
+      color: var(--color-text);
       background: #fff;
       border-radius: 8px;
       overflow: hidden;
@@ -110,14 +109,15 @@
     flex-wrap: wrap;
     margin: 0 -16px;
 
-    .article__item {
+    &__item {
+      width: 33.333%;
       padding: 0 16px;
 
       a {
         transition: $hover;
     
         &:hover {
-          color: color(accent);
+          color: var(--color-accent);
         }
       }
     }

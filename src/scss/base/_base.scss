@@ -62,9 +62,9 @@ body {
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: color('text');
-  background-color: color('bg');
-  font: $font-weight _rem($font-size-base-px) #{'/'} _line_height($font-size-base-px) $font-family;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font: $font-weight _rem($font-size-base-px) #{'/'} _line_height($font-size-base-px) var(--font-family-sans);
   -moz-font-feature-settings : 'palt' 1;
   font-feature-settings : 'palt' 1;
 
@@ -81,11 +81,11 @@ img {
 }
 
 a {
-  color: color(link);
+  color: var(--color-text);
   text-decoration: none;
   transition: $hover;
 
   &:hover {
-    color: rgba(color(text), .6);
+    color: rgba(var(--color-text), .6);
   }
 }
