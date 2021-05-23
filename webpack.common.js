@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AutoPrefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const IS_DEV = (process.env.NODE_ENV === 'dev');
 
@@ -30,8 +31,13 @@ module.exports = {
       chunkFilename: 'assets/css/[id].css',
     }),
     new HtmlWebpackPlugin({
+      scriptLoading: 'defer',
       template: 'src/index.html'
-    })
+    }),
+    // new BundleAnalyzerPlugin({
+    //   analyzerMode: 'static',
+    //   generateStatsFile: false
+    // })
   ],
   output: {
     filename: 'assets/js/[name].min.js',

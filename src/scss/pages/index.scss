@@ -6,25 +6,38 @@ index
 ============================ */
 .hero {
   position: relative;
+  display: flex;
+  align-items: center;
   background: url(../img/index/main.jpg) no-repeat 50% 50%;
   background-size: cover;
-  height: 600px;
+  height: calc(100vh - $header-h-mb);
+  min-height: 600px;
+  padding: 0 5%;
   z-index: 1;
+
+  &__content {
+    width: 50%;
+  }
+
+  @include mq(sm) {
+    height: calc(100vh - $header-h-tab);
+  }
 }
 
 .hero_copy {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  width: 85%;
-  max-width: 750px;
   margin: 0 auto;
   color: #fff;
   @include fs_clamp(3.2rem, 4vw, 6.4rem, 700);
   line-height: 1.2;
   letter-spacing: .1em;
   text-align: left;
+}
+
+.hero_text {
+  margin-top: 24px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 @include mq(sm) {
@@ -68,7 +81,9 @@ index
 
 /* intro
 ============================ */
-.top_intro {
+.top_about {
+  background: #fff;
+
   .section_ttl {
     text-align: left;
   }
@@ -92,9 +107,73 @@ index
 
 
 
-/* concept
+/* feature
 ============================ */
-.concept {
+.top_feature {
+  background: #fff;
+}
+
+.feature_list {
+  margin-top: 40px;
+
+  &__item {
+    padding: 40px 0;
+
+  }
+
+  &__num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 16px 0 0;
+    color: #fff;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .05em;
+  }
+
+  &__title {
+    margin: 12px 0 0;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+
+  &__desc {
+    margin: 12px 0 0;
+    font-size: 1.5rem;
+    letter-spacing: .02em;
+    line-height: 2;
+  }
+
+  @include mq(mid) {
+    margin: calc(60px - 20px) -20px -20px;
+
+    &__item {
+      display: grid;
+      grid-template-areas:
+        "Img Head"
+        "Img Desc";
+      grid-template-rows: auto 1fr;
+      grid-gap: 40px;
+      padding: 80px 0;
+    }
+
+    &__title {
+      grid-area: Head;
+    }
+
+    &__img {
+      grid-area: Img;
+    }
+
+    &__desc {
+      grid-area: Desc;
+    }
+  }
 }
 
 

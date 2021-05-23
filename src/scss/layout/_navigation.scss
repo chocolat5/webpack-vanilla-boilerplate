@@ -42,6 +42,13 @@ $gnav-font-size: 1.6rem;
     }
   }
 
+  &__contact {
+    color: #fff;
+    background: var(--color-primary);
+    border-radius: var(--radius);
+    text-align: center;
+  }
+
   @media screen and ( max-width: 899px ) {
     position: fixed;
     top: 0;
@@ -81,6 +88,10 @@ $gnav-font-size: 1.6rem;
       font-size: $gnav-font-size;
     }
     
+    &__contact {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
   }
 }
 
