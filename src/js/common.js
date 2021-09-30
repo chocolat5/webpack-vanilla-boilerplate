@@ -19,13 +19,12 @@ const anchors = document.querySelectorAll('a[href^="#"]');
 const easing = Quint.easeInOutSine;
 let isMobile = false;
 
-//let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false;
-
 /* -------------------------------
 window size
 -------------------------------- */
 const getWindowSize = () => {
-  if (winW < 599) {
+  const mediaQueryList = window.matchMedia("(max-width: 599px)");
+  if (mediaQueryList.matches) {
     isMobile = true;
   } else {
     isMobile = false;
