@@ -1,30 +1,32 @@
+@use "../../utilities" as utils;
+
 /*
 * Footer
 * ================================== */
 .l_footer {
-  padding: $pd-sec-sm 0;
+  padding: utils.$pd-sec-sm 0;
   background: var(--color-primary);
 
-  @include mq(mid) {
-    padding: $pd-sec-mid 0;
+  @include utils.mq(mid) {
+    padding: utils.$pd-sec-mid 0;
   }
 }
 
 .footer {
   &__inner {
-    @include container-liquid;
+    @include utils.container-liquid;
     position: relative;
-    @include grid(2, 24px);
+    @include utils.grid(2, 24px);
 
-    @include mq(mid) {
-      @include grid(4, 32px);
+    @include utils.mq(mid) {
+      @include utils.grid(4, 32px);
       grid-template-rows: 1fr auto;
       grid-gap: 40px 2.342vw;
     }
   }
 
   &__info {
-    @include mq(mid) {
+    @include utils.mq(mid) {
       grid-column: 1 / span 2;
       grid-row: 1;
     }
@@ -56,7 +58,7 @@
       }
     }
 
-    @include mq(mid) {
+    @include utils.mq(mid) {
       grid-column: 1 / -1;
       grid-row: 2;
 
@@ -73,7 +75,7 @@
     letter-spacing: .02em;
     justify-self: end;
 
-    @include mq(mid) {
+    @include utils.mq(mid) {
       grid-column: 1 / -1;
       grid-row: 2;
       align-self: end;
@@ -116,7 +118,7 @@
     }
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     grid-column: 3 / -1;
     grid-row: 1;
   }

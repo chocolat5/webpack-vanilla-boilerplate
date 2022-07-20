@@ -1,3 +1,5 @@
+@use 'variables' as var;
+
 // font size 
 @function get_vw($size, $viewport) {
   $rate: 100 / $viewport;
@@ -11,13 +13,13 @@
 
 // line-height
 @function _line_height($px) {
-  @if ($px > $line-height-base-px) {
-    @return ($px / $line-height-base-px);
+  @if ($px > var.$line-height-base-px) {
+    @return ($px / var.$line-height-base-px);
   } @else {
-    @return ($line-height-base-px / $px);
+    @return (var.$line-height-base-px / $px);
   }
 }
 
 @function _line_height2($px) {
-  @return (($line-height-base-px * 2) / $px) + em;
+  @return ((var.$line-height-base-px * 2) / $px) + em;
 }

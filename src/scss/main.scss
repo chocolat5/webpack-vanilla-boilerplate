@@ -1,49 +1,8 @@
 @charset 'utf-8';
 
-/* Utilities */
-@import
-  'utilities/_variables',
-  'utilities/_functions',
-  'utilities/_mixins';
-
-
-///* Vendors */
-//@import 'vendors/';
-
-
-/* Base */
-@import 'base/_base';
-
-
-/* Layout */
-@import
-  'layout/_layout',
-  'layout/_form',
-  'layout/_header',
-  'layout/_navigation',
-  'layout/_footer',
-  'layout/_article',
-  'layout/_news';
-
-
-/* Components */
-@import
-  'components/_buttons',
-  'components/_loading',
-  'components/_breadcrumbs';
-
-
-///* WordPress */
-// @import './wp/index';
-
-
-/* Pages */
-@import
-  'pages/index',
-  // 'pages/page',
-  'pages/404';
-
-
-///* Themes */
-//@import 'themes/';
-
+@forward 'common/base';
+@forward 'common/layout';
+@forward 'common/components';
+// @forward 'vendors';
+@forward 'pages';
+// @forward 'themes';

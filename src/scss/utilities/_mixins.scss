@@ -1,3 +1,5 @@
+@use "variables" as var;
+
 // ================================================= */
 // Mixins
 // @include mixin-name($value)
@@ -6,14 +8,14 @@
 //* Mediaquery
 // --------------------------------------- */
 @mixin screen-small {
-  @media screen and (min-width: map-get($breakpoints, 'sm') - 1) {
+  @media screen and (min-width: map-get(var.$breakpoints, 'sm') - 1) {
     @content;
   }
 }
 
 @mixin mq($point) {
-  @if map-has-key($breakpoints, $point) {
-    @media screen and (min-width: map-get($breakpoints, $point)) {
+  @if map-has-key(var.$breakpoints, $point) {
+    @media screen and (min-width: map-get(var.$breakpoints, $point)) {
       @content;
     }
   }
@@ -31,22 +33,22 @@
 // --------------------------------------- */
 // 最大幅あり
 @mixin container() {
-  padding: 0 $pd-sm;
+  padding: 0 var.$pd-sm;
   margin: 0 auto;
 
 
-  @include mq($main + 64px) {
-    max-width: $main;
+  @include mq(var.$main + 64px) {
+    max-width: var.$main;
     padding: 0;
   }
 }
 
 // 最大幅なし
 @mixin container-liquid {
-  padding: $pd-sec-sm $pd-sm;
+  padding: var.$pd-sec-sm var.$pd-sm;
 
   @include mq(mid) {
-    padding: $pd-sec-mid $pd-mid;
+    padding: var.$pd-sec-mid var.$pd-mid;
   }
 }
 
@@ -107,7 +109,7 @@
 
 //* Background image for thumbnail
 // --------------------------------------- */
-@mixin aspect-ratio( $width, $height, $image: $noimg ) {
+@mixin aspect-ratio( $width, $height, $image: var.$noimg ) {
   display: block;
   width: 100%;
   height: 0;
@@ -168,7 +170,7 @@
   font-weight: $weight;
 }
 
-//@include fs_vw(13, 320);
+//@include mixin.fs_vw(13, 320);
 // font-size with vw
 @mixin fs_vw($font_size: 10, $viewport: 375) {
   font-size: $font_size * 1px;

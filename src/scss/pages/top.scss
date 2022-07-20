@@ -1,3 +1,5 @@
+@use "../utilities" as utils;
+
 /* =====================================
 index
 ====================================== */
@@ -10,7 +12,7 @@ index
   align-items: center;
   background: url(../img/index/main.jpg) no-repeat 50% 50%;
   background-size: cover;
-  height: calc(100vh - $header-h-mb);
+  height: calc(100vh - utils.$header-h-mb);
   min-height: 600px;
   padding: 0 5%;
   z-index: 1;
@@ -19,15 +21,15 @@ index
     width: 50%;
   }
 
-  @include mq(sm) {
-    height: calc(100vh - $header-h-tab);
+  @include utils.mq(sm) {
+    height: calc(100vh - utils.$header-h-tab);
   }
 }
 
 .hero_copy {
   margin: 0 auto;
   color: #fff;
-  @include fs_clamp(3.2rem, 4vw, 6.4rem, 700);
+  @include utils.fs_clamp(3.2rem, 4vw, 6.4rem, 700);
   line-height: 1.2;
   letter-spacing: .1em;
   text-align: left;
@@ -40,7 +42,7 @@ index
   font-weight: bold;
 }
 
-@include mq(sm) {
+@include utils.mq(sm) {
   .hero_copy {
     line-height: 1.1;
   }
@@ -97,7 +99,7 @@ index
     margin-top: 24px;
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     .btn_primary {
       margin-top: 32px;
     }
@@ -149,7 +151,7 @@ index
     line-height: 2;
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     margin: calc(60px - 20px) -20px -20px;
 
     &__item {
@@ -191,11 +193,11 @@ index
   }
 
   &__ttl {
-    @include fs_clamp(2rem, 4vw, 2.4rem, 600);
+    @include utils.fs_clamp(2rem, 4vw, 2.4rem, 600);
   }
 
   &__desc {
-    @include fs_clamp(1.4rem, 2.5vw, 1.6rem);
+    @include utils.fs_clamp(1.4rem, 2.5vw, 1.6rem);
     line-height: 1.6;
   }
 
@@ -206,7 +208,7 @@ index
     border-bottom: 2px solid rgb(5, 214, 139);
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     display: flex;
     justify-content: space-between;
 
@@ -238,9 +240,9 @@ index
     }
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     .container {
-      max-width: $x-small;
+      max-width: utils.$x-small;
       padding: 0;
     }
   }

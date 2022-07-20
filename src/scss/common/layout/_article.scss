@@ -1,3 +1,5 @@
+@use "../../utilities" as utils;
+
 /*
 * Article
 * ================================== */
@@ -9,12 +11,12 @@
 
   &__cat {
     margin: 1em 0;
-    @include fs_clamp(1.2rem, 2.5vw, 1.3rem);
+    @include utils.fs_clamp(1.2rem, 2.5vw, 1.3rem);
     opacity: .7;
   }
 
   &__ttl {
-    @include fs_clamp(1.5rem, 2.5vw, 1.7rem);
+    @include utils.fs_clamp(1.5rem, 2.5vw, 1.7rem);
     line-height: 2;
   }
 }
@@ -35,7 +37,7 @@
     background: #fff;
     border: 2px solid #252525;
     border-radius: 4px;
-    @include fs_clamp(1.5rem, 2.5vw, 1.6rem, 500);
+    @include utils.fs_clamp(1.5rem, 2.5vw, 1.6rem, 500);
     line-height: 28px;
     text-align: center;
   }
@@ -46,7 +48,7 @@
   }
 
 
-  @include mq(medium) {
+  @include utils.mq(medium) {
     li {
       margin: 0 8px;
     }
@@ -65,7 +67,7 @@
     width: 100%;
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     display: flex;
     justify-content: space-between;
 
@@ -93,18 +95,18 @@
   }
 
   .article__thumb {
-    @include aspect-ratio(1.618, 1);
+    @include utils.aspect-ratio(1.618, 1);
     width: calc(100% + 48px);
     margin: 0 -24px;
   }
 
   &__link {
     display: inline-block;
-    @include fs_clamp(1.4rem, 2.5vw, 1.5rem);
+    @include utils.fs_clamp(1.4rem, 2.5vw, 1.5rem);
     border-bottom: 2px solid #ccc;
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -16px;
@@ -114,7 +116,7 @@
       padding: 0 16px;
 
       a {
-        transition: $hover;
+        transition: utils.$hover;
     
         &:hover {
           color: var(--color-accent);
@@ -134,7 +136,7 @@
 
   &__ttl,
   h1 {
-    @include fs_clamp(2.8rem, 4vw, 4.8rem, bold);
+    @include utils.fs_clamp(2.8rem, 4vw, 4.8rem, bold);
   }
 
   .article__date,
@@ -144,15 +146,15 @@
   }
 
   h2 {
-    @include fs_clamp(2.4rem, 2.5vw, 3.6rem, bold);
+    @include utils.fs_clamp(2.4rem, 2.5vw, 3.6rem, bold);
   }
 
   h3 {
-    @include fs_clamp(1.8rem, 2.5vw, 2rem, bold);
+    @include utils.fs_clamp(1.8rem, 2.5vw, 2rem, bold);
   }
 
   h4 {
-    @include fs_clamp(1.6rem, 2.5vw, 1.6rem, bold);
+    @include utils.fs_clamp(1.6rem, 2.5vw, 1.6rem, bold);
   }
 
   p, ul {
@@ -166,6 +168,6 @@
     list-style-position: inside;
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
   }
 }

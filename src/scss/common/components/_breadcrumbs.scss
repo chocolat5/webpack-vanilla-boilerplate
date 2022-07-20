@@ -1,12 +1,14 @@
+@use "../../utilities" as utils;
+
 /* breadcrumbs
 ====================================== */
 .breadcrumbs {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem $pd-sm;
+  padding: 2rem utils.$pd-sm;
 
-  @include mq(mid) {
-    padding: 2rem $pd-mid;
+  @include utils.mq(mid) {
+    padding: 2rem utils.$pd-mid;
   }
 
   span {

@@ -1,3 +1,5 @@
+@use "../../utilities" as utils;
+
 /*
 * Layout
 * ================================== */
@@ -11,21 +13,21 @@
 
 // 最大幅あり
 .l_section {
-  padding: $pd-sec-sm 0;
+  padding: utils.$pd-sec-sm 0;
 
-  @include mq(mid) {
-    padding: $pd-sec-mid 0;
+  @include utils.mq(mid) {
+    padding: utils.$pd-sec-mid 0;
   }
 }
 
 .l_container {
-  @include container;
+  @include utils.container;
 }
 
 
 // 最大幅なし（リキッド）
 // .section {
-//   @include container-liquid
+//   @include utils.container-liquid
 // }
 
 
@@ -38,42 +40,42 @@
 /* Typography
 ====================================== */
 .headline-1 {
-  @include fs_clamp(2.4rem, 4vw, 4.8rem, bold);
+  @include utils.fs_clamp(2.4rem, 4vw, 4.8rem, bold);
 }
 
 .headline-2 {
-  @include fs_clamp(2.4rem, 2.5vw, 3.6rem, bold);
+  @include utils.fs_clamp(2.4rem, 2.5vw, 3.6rem, bold);
 }
 
 .headline-3 {
-  @include fs_clamp(1.8rem, 2.5vw, 2rem, bold);
+  @include utils.fs_clamp(1.8rem, 2.5vw, 2rem, bold);
 }
 
 .headline-4 {
-  @include fs_clamp(1.6rem, 2.5vw, 1.6rem, bold);
+  @include utils.fs_clamp(1.6rem, 2.5vw, 1.6rem, bold);
 }
 
 p, li {
-  @include fs_clamp(1.4rem, 2.5vw, 1.6rem);
+  @include utils.fs_clamp(1.4rem, 2.5vw, 1.6rem);
 }
 
 .section_ttl {
-  @include fs_clamp(2.4rem, 4vw, 4.8rem, bold);
+  @include utils.fs_clamp(2.4rem, 4vw, 4.8rem, bold);
   line-height: 1.4;
   text-align: center;
 
   span {
     display: block;
-    @include fs_clamp(1.4rem, 2.5vw, 1.6rem);
+    @include utils.fs_clamp(1.4rem, 2.5vw, 1.6rem);
     line-height: 1.2;
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
   }
 }
 
 .section_lead {
-  @include fs_clamp(1.4rem, 2.5vw, 1.6rem);
+  @include utils.fs_clamp(1.4rem, 2.5vw, 1.6rem);
   line-height: 2;
 }
 
@@ -87,14 +89,14 @@ p, li {
 
   }
 
-  @media screen and ( max-width: map-get($breakpoints, sm) - 1px ) {
+  @media screen and ( max-width: map-get(utils.$breakpoints, sm) - 1px ) {
     &__img + #{$this}__content,
     &__content + #{$this}__img {
       margin: 40px 0 0;
     }
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     display: flex;
 
     &__img {
@@ -111,7 +113,7 @@ p, li {
 }
 
 .grid_block {
-  @include grid(1, 16px 24px);
+  @include utils.grid(1, 16px 24px);
   grid-template-areas:
     "head"
     "img"
@@ -136,8 +138,8 @@ p, li {
     grid-area: content;
   }
 
-  @include mq(mid) {
-    @include grid(2, 24px 56px);
+  @include utils.mq(mid) {
+    @include utils.grid(2, 24px 56px);
     grid-template-areas:
       "img head"
       "img content";

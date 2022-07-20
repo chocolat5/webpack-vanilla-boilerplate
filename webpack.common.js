@@ -90,7 +90,8 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: IS_DEV
+              sourceMap: IS_DEV,
+              implementation: require('sass')
             }
           }
         ]

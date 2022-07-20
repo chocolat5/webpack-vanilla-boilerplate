@@ -1,15 +1,17 @@
+@use "../../utilities" as utils;
+
 /*
 *  News
 * ================================== */
 .news {
   &__ttl {
-    @include fs_clamp(1.6rem, 2.5vw, 1.8rem);
+    @include utils.fs_clamp(1.6rem, 2.5vw, 1.8rem);
     font-weight: bold;
     line-height: 1.8;
   }
 
   &__date {
-    @include fs_clamp(1.2rem, 2.5vw, 1.3rem);
+    @include utils.fs_clamp(1.2rem, 2.5vw, 1.3rem);
   }
 
   &__category {
@@ -17,7 +19,7 @@
     padding: .1em 0;
     color: #fff;
     background: var(--color-secondary);
-    @include fs_clamp(1.2rem, 2.5vw, 1.3rem);
+    @include utils.fs_clamp(1.2rem, 2.5vw, 1.3rem);
     line-height: 1.2;
     letter-spacing: .05em;
     text-align: center;
@@ -48,12 +50,12 @@
   }
 
   &__ttl {
-    @include fs_clamp(1.6rem, 2.5vw, 1.8rem);
+    @include utils.fs_clamp(1.6rem, 2.5vw, 1.8rem);
     font-weight: bold;
     line-height: 1.8;
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     &__item {
       a {
         display: flex;

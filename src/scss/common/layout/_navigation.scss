@@ -1,3 +1,5 @@
+@use "../../utilities" as utils;
+
 /*
 * Nabigation
 * ================================== */
@@ -68,7 +70,7 @@ $gnav-font-size: 1.6rem;
     }
   }
   
-  @include mq(mid) {
+  @include utils.mq(mid) {
     margin-left: auto;
 
     &__list {
@@ -118,7 +120,7 @@ $gnav-font-size: 1.6rem;
     }
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     &__list {
       position: relative;
       padding: 24px;
@@ -137,7 +139,7 @@ $gnav-font-size: 1.6rem;
       font-size: $gnav-font-size;
 
       &:after {
-        @include arrow-brackets(15px, 2px, down, var(--color-text));
+        @include utils.arrow-brackets(15px, 2px, down, var(--color-text));
         position: relative;
         margin-left: 8px;
       }
@@ -183,7 +185,7 @@ $gnav-font-size: 1.6rem;
 
 /* header onscroll
 ====================================== */
-// @include mq(mid) {
+// @include utils.mq(mid) {
 //   .gnav_item__link,
 //   .gnav_sub__name {
 //     color: #fff;
@@ -227,7 +229,7 @@ $gnav-font-size: 1.6rem;
   height: 48px;
   z-index: 9000;
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     display: none;
   }
 }

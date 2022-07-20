@@ -1,3 +1,5 @@
+@use "../../utilities" as utils;
+
 /*
 * Header
 * ================================== */
@@ -6,7 +8,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  height: $header-h-mb;
+  height: utils.$header-h-mb;
   width: 100%;
   padding: 0 5%;
   z-index: 1000;
@@ -16,8 +18,8 @@
   //   background: rgba(#fff,.8);
   // }
 
-  @include mq(mid) {
-    min-height: $header-h-tab;
+  @include utils.mq(mid) {
+    min-height: utils.$header-h-tab;
     transition:
       background .4s  cubic-bezier(.19,1,.22,1),
       min-height .3s cubic-bezier(.19,1,.22,1);
@@ -32,7 +34,7 @@
     z-index: 3;
   }
 
-  @include mq(mid) {
+  @include utils.mq(mid) {
     &__logo {
       width: 78px;
       flex: 0 0 78px;
